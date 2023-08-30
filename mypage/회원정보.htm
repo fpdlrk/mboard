@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link type="text/css" href="../assets/css/import.css" rel="stylesheet">
+    <link type="text/css" href="../assets/css/simplebar.css" rel="stylesheet">
+    <script type="text/javascript" src="../assets/js/jquery-2.2.4.js"></script>
+    <script type="text/javascript" src="../assets/js/simplebar.min.js"></script>
+</head>
+<body>
+
+    
+    <div class="wrap">
+        <div class="wrap_container full_container">
+            <!--S: 메뉴가 있는 layout -->
+            <div class="menu_area">
+                <div class="comname">
+                    MINDBOARD
+                </div>
+
+                <div class="btn_create_wrap">
+                    <button type="button" class="btn btn_black btn_middle wide">WORKSPACE CREATE</button>
+                </div>
+                
+                <div class="lnb_outer" data-simplebar="init">
+                    <div class="lnb">
+                        <div class="item">
+                            <div class="afa_area">
+                                <div class="label_item">
+                                    <span class="FirstName_label comm_label"></span><span class="labelFirstName">LS</span>
+                                </div>
+                            </div>
+                            <ul>
+                                <li class="selected"><a href="#" class="selected">Projects</a></li>
+                                <li><a href="#">Members</a></li>
+                                <li><a href="#">Settings</a></li>
+                            </ul>
+                            <button type="button" class="toggle">toggle</button>
+                        </div>
+
+                        <div class="item">
+                            <div class="afa_area">
+                                <div class="label_item">
+                                    <span class="FirstName_label comm_label"></span><span class="labelFirstName">Genie</span>
+                                </div>
+                            </div>
+                            <ul>
+                                <li><a href="#">Projects</a></li>
+                                <li><a href="#">Members</a></li>
+                                <li><a href="#">Settings</a></li>
+                            </ul>
+                            <button type="button" class="toggle">toggle</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="lnb_btm">
+                    <div class="afa_area">
+                        <div class="label_item">
+                            <span class="FirstName_label comm_label"></span><span class="labelFirstName">Summer Lee<em class="s_info">Admin</em></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--E: 메뉴가 있는 layout -->
+            <div class="screen_area">
+
+                <div class="header_area _gnb">
+                    <div class="gnb">
+                        <ul>
+                            <li class="selected"><a href="#" class="selected">My profile</a></li>
+                            <li><a href="#">My Enquiries</a></li>
+                            <li><a href="#">Settings</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="content_area" data-simplebar="init">
+                    
+                    <div class="my_info">
+                        <div class="afa_area">
+                            <div class="label_item">
+                                <span class="FirstName_label comm_label"></span><span class="labelFirstName">Summer Lee<em class="s_info">seullee@gmail.com</em></span>
+                            </div>
+                        </div>
+                        <div class="ins_wrap">
+                            <div class="form_group">
+    
+                                <div class="form_group tp_inline">
+                                    <label for="" class="tit">연락처</label>
+                                    <div class="form_item" id="phoneNumber">010-1111-2222</div>
+                                </div>
+                                <div class="form_group tp_inline">
+                                    <label for="" class="tit">조직</label>
+                                    <div class="form_item" id="userOgani">마인드프로</div>
+                                </div>
+                                <div class="form_group tp_inline">
+                                    <label for="" class="tit">직책/부서</label>
+                                    <div class="form_item"><span  id="userPart">주임</span>/<span  id="userPos">개발</span></div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="ins_wrap">
+                            <div class="form_group">
+                                <div class="form_group tp_inline">
+                                    <label for="" class="tit">비밀번호</label>
+                                    <div class="form_item">**********</div>
+                                </div>
+                                <div class="form_group tp_inline">
+                                    <label for="" class="tit">2단계 인증</label>
+                                    <div class="form_item">미사용</div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn_red btn_small useModify">개인정보수정</button>
+                    </div>
+
+                    <div class="project_info">
+                        <h2>My Project</h2>
+                        
+                        <div class="project_list">
+                            <!--S: 공통 card -->
+                            <div class="comm_card item">
+                                <div class="comm_card_header">
+                                    <h2 class="tit">LS</h2>
+                                    <div class="btn_wrap">
+                                        <button type="button" class="btn btn_black btn_mini btn_mdf">수정요청</button>
+                                    </div>
+                                </div>
+                                <div class="comm_card_body">
+                                    <div class="inf_area">
+                                        <p>Workspace : <span>IPMS</span></p>
+                                        <p>Project :  <span>프로젝트의 리스트</span></p>
+                                    </div>
+                                    <div class="form_group">
+            
+                                        <div class="form_group">
+                                            <label for="" class="tit">조직</label>
+                                            <div class="form_item">
+                                                <input type="text" class="comm_input tp_small" placeholder="Enter Email" />
+                                            </div>
+                                        </div> 
+                                        <div class="form_group_block">
+                                            <div class="form_group">
+                                                <label for="" class="tit">직책</label>
+                                                <div class="form_item">
+                                                    <input type="text" class="comm_input tp_small" placeholder="Enter Company" />
+                                                </div>
+                                            </div>
+                                            <div class="form_group">
+                                                <label for="" class="tit">부서</label>
+                                                <div class="form_item">
+                                                    <input type="text" class="comm_input tp_small" placeholder="Enter Department" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <!--E: 공통 card -->
+                            <div class="comm_card item">
+                                <div class="comm_card_header">
+                                    <h2 class="tit">Genie</h2>
+                                    <div class="btn_wrap">
+                                        <button type="button" class="btn btn_black btn_mini btn_mdf">수정요청</button>
+                                    </div>
+                                </div>
+                                <div class="comm_card_body">
+                                    <div class="inf_area">
+                                        <p>Workspace : <span>IPMS</span></p>
+                                        <p>Project :  <span>프로젝트의 리스트</span></p>
+                                    </div>
+                                    <div class="form_group">
+            
+                                        <div class="form_group">
+                                            <label for="" class="tit">조직</label>
+                                            <div class="form_item">
+                                                <input type="text" class="comm_input tp_small" placeholder="Enter Email" />
+                                            </div>
+                                        </div> 
+                                        <div class="form_group_block">
+                                            <div class="form_group">
+                                                <label for="" class="tit">직책</label>
+                                                <div class="form_item">
+                                                    <input type="text" class="comm_input tp_small" placeholder="Enter Company" />
+                                                </div>
+                                            </div>
+                                            <div class="form_group">
+                                                <label for="" class="tit">부서</label>
+                                                <div class="form_item">
+                                                    <input type="text" class="comm_input tp_small" placeholder="Enter Department" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comm_card item">
+                                <div class="comm_card_header">
+                                    <h2 class="tit">스마일게이트</h2>
+                                    <div class="btn_wrap">
+                                        <button type="button" class="btn btn_black btn_mini btn_mdf">수정요청</button>
+                                    </div>
+                                </div>
+                                <div class="comm_card_body">
+                                    <div class="inf_area">
+                                        <p>Workspace : <span>IPMS</span></p>
+                                        <p>Project :  <span>프로젝트의 리스트</span></p>
+                                    </div>
+                                    <div class="form_group">
+            
+                                        <div class="form_group">
+                                            <label for="" class="tit">조직</label>
+                                            <div class="form_item">
+                                                <input type="text" class="comm_input tp_small" placeholder="Enter Email" />
+                                            </div>
+                                        </div> 
+                                        <div class="form_group_block">
+                                            <div class="form_group">
+                                                <label for="" class="tit">직책</label>
+                                                <div class="form_item">
+                                                    <input type="text" class="comm_input tp_small" placeholder="Enter Company" />
+                                                </div>
+                                            </div>
+                                            <div class="form_group">
+                                                <label for="" class="tit">부서</label>
+                                                <div class="form_item">
+                                                    <input type="text" class="comm_input tp_small" placeholder="Enter Department" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comm_card item">
+                                <div class="comm_card_header">
+                                    <h2 class="tit">LS</h2>
+                                    <div class="btn_wrap">
+                                        <button type="button" class="btn btn_black btn_mini btn_mdf">수정요청</button>
+                                    </div>
+                                </div>
+                                <div class="comm_card_body">
+                                    <div class="inf_area">
+                                        <p>Workspace : <span>IPMS</span></p>
+                                        <p>Project :  <span>프로젝트의 리스트</span></p>
+                                    </div>
+                                    <div class="form_group">
+            
+                                        <div class="form_group">
+                                            <label for="" class="tit">조직</label>
+                                            <div class="form_item">
+                                                <input type="text" class="comm_input tp_small" placeholder="Enter Email" />
+                                            </div>
+                                        </div> 
+                                        <div class="form_group_block">
+                                            <div class="form_group">
+                                                <label for="" class="tit">직책</label>
+                                                <div class="form_item">
+                                                    <input type="text" class="comm_input tp_small" placeholder="Enter Company" />
+                                                </div>
+                                            </div>
+                                            <div class="form_group">
+                                                <label for="" class="tit">부서</label>
+                                                <div class="form_item">
+                                                    <input type="text" class="comm_input tp_small" placeholder="Enter Department" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 스크립트 영역  -->
+    <script src="../assets/js/commjs.js"></script>
+    <script src="../assets/js/modal.js"></script>
+    <script src="../assets/js/popup.js"></script>
+
+    <!-- <script type="module">
+        import {commjs} from '../assets/js/commjs.js';
+        $('.labelFirstName').each(function(i,v){
+            let str = $(v).text();
+            $('.FirstName_label').text(commjs.nameFirstAt(str));
+        });
+    </script> -->
+
+</body>
+</html>

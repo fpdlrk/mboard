@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link type="text/css" href="../assets/css/import.css" rel="stylesheet">
+    <link type="text/css" href="../assets/css/simplebar.css" rel="stylesheet">
+    <script type="text/javascript" src="../assets/js/jquery-2.2.4.js"></script>
+    <script type="text/javascript" src="../assets/js/simplebar.min.js"></script>
+</head>
+<body>
+
+    
+    <div class="wrap">
+        <div class="wrap_container full_container">
+            <!--S: 메뉴가 있는 layout -->
+            <div class="menu_area">
+                <div class="comname">
+                    MINDBOARD
+                </div>
+
+                <div class="btn_create_wrap">
+                    <button type="button" class="btn btn_black btn_middle wide" data-id="workSpaceCreate">WORKSPACE CREATE</button>
+                </div>
+                
+                <div class="lnb_outer" data-simplebar="init">
+                    <div class="lnb">
+                        <div class="item">
+                            <div class="afa_area">
+                                <div class="label_item">
+                                    <span class="FirstName_label comm_label"></span><span class="labelFirstName">LS</span>
+                                </div>
+                            </div>
+                            <ul>
+                                <li class="selected"><a href="#" class="selected">Projects</a></li>
+                                <li><a href="#">Members</a></li>
+                                <li><a href="#">Settings</a></li>
+                            </ul>
+                            <button type="button" class="toggle">toggle</button>
+                        </div>
+
+                        <div class="item">
+                            <div class="afa_area">
+                                <div class="label_item">
+                                    <span class="FirstName_label comm_label"></span><span class="labelFirstName">Genie</span>
+                                </div>
+                            </div>
+                            <ul>
+                                <li><a href="#">Projects</a></li>
+                                <li><a href="#">Members</a></li>
+                                <li><a href="#">Settings</a></li>
+                            </ul>
+                            <button type="button" class="toggle">toggle</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="lnb_btm">
+                    <div class="afa_area">
+                        <div class="label_item">
+                            <span class="FirstName_label comm_label"></span><span class="labelFirstName">Summer Lee<em class="s_info">Admin</em></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--E: 메뉴가 있는 layout -->
+            <div class="screen_area">
+
+                <div class="content_area" data-simplebar="init">
+
+                    <div class="dashboard">
+                        
+                        <div class="dashboard_group">
+                            <div class="dashboard_group_header">
+                                <h2 class="tit">Templates</h2>
+                                <p>프로젝트의 목적과 분야에 맞는 템플릿을 골라보세요.</p>
+                            </div>
+                        </div>
+
+                        <div class="dashboard_group">
+                            <div class="dashboard_group_header">
+                                <div class="flex_box">
+                                    <h2 class="tit">Your Workspaces</h2>
+                                    <button type="button" class="btn btn_red btn_small" data-id="workSpaceCreate">CREATE</button>
+                                </div>
+                            </div>
+                            
+                            <div class="project_group">
+                                <div class="project_group_header spc_name">
+                                    <div class="afa_area">
+                                        <div class="label_item">
+                                            <span class="FirstName_label comm_label"></span><span class="labelFirstName">LS</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="project_list">
+                                    <!--S: 공통 card -->
+                                    <div class="comm_card item">
+                                        <div class="comm_card_header">
+                                            <h2 class="tit">XXXX</h2>
+                                            <div class="btn_wrap">
+                                                <div class="labelText _template _tmpS">SCRUM</div>
+                                            </div>
+                                        </div>
+                                        <div class="comm_card_body">
+                                            <div class="inf_area">
+                                                <p>Workspace : <span>LS</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--E: 공통 card -->
+                                    <div class="comm_card item">
+                                        <div class="comm_card_header">
+                                            <h2 class="tit">DOSIRAK</h2>
+                                            <div class="btn_wrap">
+                                                <div class="labelText _template _tmpG">GENERAL</div>
+                                            </div>
+                                        </div>
+                                        <div class="comm_card_body">
+                                            <div class="inf_area">
+                                                <p>Workspace : <span>LS</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="comm_card item">
+                                        <div class="comm_card_header">
+                                            <h2 class="tit">IPMS</h2>
+                                            <div class="btn_wrap">
+                                                <div class="labelText _template _tmpK">KANBAN</div>
+                                            </div>
+                                        </div>
+                                        <div class="comm_card_body">
+                                            <div class="inf_area">
+                                                <p>Workspace : <span>LS</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="comm_card item">
+                                        <div class="comm_card_header">
+                                            <h2 class="tit">MELON</h2>
+                                            <div class="btn_wrap">
+                                                <div class="labelText _template _tmpT">TASK</div>
+                                            </div>
+                                        </div>
+                                        <div class="comm_card_body">
+                                            <div class="inf_area">
+                                                <p>Workspace : <span>LS</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="comm_card item">
+                                        <button type="button" class="create _project" data-id="projectCreate">+ CREATE NEW PROJECT</button>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                            <div class="project_group">
+                                <div class="project_group_header spc_name">
+                                    <div class="afa_area">
+                                        <div class="label_item">
+                                            <span class="FirstName_label comm_label"></span><span class="labelFirstName">Genie</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="project_list">
+                                    <!--S: 공통 card -->
+                                    <div class="comm_card item">
+                                        <div class="comm_card_header">
+                                            <h2 class="tit">쇼핑몰 알람 설정</h2>
+                                            <div class="btn_wrap">
+                                                <div class="labelText _template _tmpS">SCRUM</div>
+                                            </div>
+                                        </div>
+                                        <div class="comm_card_body">
+                                            <div class="inf_area">
+                                                <p>Workspace : <span>LS</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--E: 공통 card -->
+                                    <div class="comm_card item">
+                                        <div class="comm_card_header">
+                                            <h2 class="tit">쇼핑몰 알람 설정</h2>
+                                            <div class="btn_wrap">
+                                                <div class="labelText _template _tmpG">GENERAL</div>
+                                            </div>
+                                        </div>
+                                        <div class="comm_card_body">
+                                            <div class="inf_area">
+                                                <p>Workspace : <span>LS</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="comm_card item">
+                                        <div class="comm_card_header">
+                                            <h2 class="tit">쇼핑몰 알람 설정</h2>
+                                            <div class="btn_wrap">
+                                                <div class="labelText _template _tmpK">KANBAN</div>
+                                            </div>
+                                        </div>
+                                        <div class="comm_card_body">
+                                            <div class="inf_area">
+                                                <p>Workspace : <span>LS</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="comm_card item">
+                                        <div class="comm_card_header">
+                                            <h2 class="tit">쇼핑몰 알람 설정</h2>
+                                            <div class="btn_wrap">
+                                                <div class="labelText _template _tmpT">TASK</div>
+                                            </div>
+                                        </div>
+                                        <div class="comm_card_body">
+                                            <div class="inf_area">
+                                                <p>Workspace : <span>LS</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="comm_card item">
+                                        <button type="button" class="create _project" data-id="projectCreate">+ CREATE NEW PROJECT</button>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--S: 팝업 -->
+
+    <div id="workSpaceStep1" class="commPopup tp_popup workSpaceStep1">
+        <div class="pop_header">
+            <h2 id="popTitle"></h2>
+        </div>
+        <div class="pop_body">
+            <p class="sub_body_tit">
+                새로운 WORKSPACE를 생성할 수 있습니다.
+            </p>
+
+            <div class="form_group">
+                <div class="form_group">
+                    <label for="" class="tit">Workspace Name</label>
+                    <div class="form_item">
+                        <input type="text" class="comm_input tp_lg" placeholder="Enter a title of your workspace" />
+                    </div>
+                </div>
+                <div class="form_group">
+                    <label for="" class="tit">Workspace Description</label>
+                    <div class="form_item">
+                        <textarea name="" id="" class="comm_input _textarea" cols="30" rows="10" style="height:200px;" placeholder="Describe this workplace"></textarea>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="popup_footer ar">
+            <button type="button" class="btn btn_small btnCancle">Cancel</button>
+            <button type="button" class="btn btn_small btn_purple" data-id="workSpaceCreateStep2">Continue</button>
+        </div>
+    </div>
+
+    <div id="workSpaceStep2" class="commPopup tp_popup workSpaceStep2">
+        <div class="pop_header">
+            <h2 id="popTitle"></h2>
+        </div>
+        <div class="pop_body">
+            <p class="sub_body_tit">
+                워크스페이스에 팀원을 초대하세요
+            </p>
+            <div class="form_group">
+                <div class="form_group">
+                    <label for="" class="tit">Workspace members</label>
+                    <div class="form_item">
+                        <input type="text" class="comm_input tp_lg" placeholder="Enter a title of your workspace" />
+                    </div>
+                </div>
+                <div class="form_group">
+                    <label for="" class="tit">Invite with a Link</label>
+                    <div class="form_item">
+                        <div class="flex_box copy_link">
+                            <textarea name="" id="" class="comm_input _textarea _H_inher" cols="30" rows="10" placeholder="Describe this workplace"></textarea>
+                            <button type="button" class="btn btn_black w100 _H_inher mgl5" id="">Copy Link</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popup_footer ar">
+            <button type="button" class="btn btn_small btnCancle">Cancel</button>
+            <button type="button" class="btn btn_small" id="">I’ll do this later</button>
+            <button type="button" class="btn btn_small btn_purple" id="btnSave">Invite to Workspace</button>
+        </div>
+    </div>
+
+    <div id="projectStep1" class="commPopup tp_popup projectStep1">
+        <div class="pop_header">
+            <h2 id="popTitle"></h2>
+        </div>
+        <div class="pop_body">
+            <p class="sub_body_tit">
+                생성할 프로젝트의 템플릿 타입을 선택하세요.
+            </p>
+
+            <div class="template_select">
+
+                <div class="comm_card">
+                    <div class="comm_card_header">
+                        <h2 class="tit">SCRUM</h2>
+                        <div class="btn_wrap">
+                            <button type="button" class="btn btn_red btn_small wide _b_tmpS" data-id="scrumCreate">CREATE</button>
+                        </div>
+                    </div>
+                    <div class="comm_card_body">
+                        <div class="inf_area">
+                            <p>스프린트를 사용하고 작업의 우선순위를 지정하여 타임라인으로 프로젝트 진행을 관리 합니다.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comm_card">
+                    <div class="comm_card_header">
+                        <h2 class="tit">GENERAL</h2>
+                        <div class="btn_wrap">
+                            <button type="button" class="btn btn_red btn_small wide _b_tmpG" data-id="generalCreate">CREATE</button>
+                        </div>
+                    </div>
+                    <div class="comm_card_body">
+                        <div class="inf_area">
+                            <p>TO DO, IN PROGRESS, IN REVIEW, DONE 로 이루어진 가장 기본적인 PROJECT 관리형태 입니다.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comm_card">
+                    <div class="comm_card_header">
+                        <h2 class="tit">KANBAN</h2>
+                        <div class="btn_wrap">
+                            <button type="button" class="btn btn_red btn_small wide _b_tmpK" data-id="kanbanCreate">CREATE</button>
+                        </div>
+                    </div>
+                    <div class="comm_card_body">
+                        <div class="inf_area">
+                            <p>작업 상태를 시각화 하여 효율적으로 프로젝트를 관리합니다.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comm_card">
+                    <div class="comm_card_header">
+                        <h2 class="tit">TASK</h2>
+                        <div class="btn_wrap">
+                            <button type="button" class="btn btn_red btn_small wide _b_tmpT" data-id="taskCreate">CREATE</button>
+                        </div>
+                    </div>
+                    <div class="comm_card_body">
+                        <div class="inf_area">
+                            <p>가장 간단하게 할일과 진행완료 만 있는 체크 리스트 형태의 관리</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+        </div>
+        <div class="popup_footer ar">
+            <button type="button" class="btn btn_small btnCancle">Cancel</button>
+            <button type="button" class="btn btn_small btn_purple" data-id="projectCreateStep2">Continue</button>
+        </div>
+    </div>
+
+    <div id="projectStep2" class="commPopup tp_popup projectStep2">
+        <div class="pop_header">
+            <h2 id="popTitle"></h2>
+        </div>
+        <div class="pop_body">
+            <p class="sub_body_tit">
+                템플릿 정보를 입력
+            </p>
+            <div class="form_group">
+                <div class="form_group">
+                    <label for="" class="tit">WORKSPACE</label>
+                    <div class="form_item">
+                        <select class="comm_select tp_middle wide" id="" style="min-width:120px;">
+                            <option value="LS">LS</option>
+                            <option value="DOSIRAK">DOSIRAK</option>
+                            <option value="MELON">MELON</option>
+                            <option value="IPMS">IPMS</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form_group">
+                    <label for="" class="tit">PROJECT NAME</label>
+                    <div class="form_item">
+                        <input type="text" class="comm_input tp_lg" placeholder="Enter a title of your workspace" />
+                    </div>
+                </div>
+                <div class="form_group">
+                    <label for="" class="tit">TEMPLATE</label>
+                    <div class="form_item">
+                        <select class="comm_select tp_middle wide templ_select" id="" style="min-width:120px;">
+                            <option value="1" data-desc="스프린트를 사용하고 작업의 우선순위를 지정하여 타임라인으로 프로젝트 진행을 관리 합니다.">SCRUM</option>
+                            <option value="2" data-desc="TO DO, IN PROGRESS, IN REVIEW, DONE 로 이루어진 가장 기본적인 PROJECT 관리형태 입니다.">GENERAL</option>
+                            <option value="3" data-desc="작업 상태를 시각화 하여 효율적으로 프로젝트를 관리합니다.">KANBAN</option>
+                            <option value="4" data-desc="가장 간단하게 할일과 진행완료 만 있는 체크 리스트 형태의 관리 ">TASK</option>
+                        </select>
+                        <p class="desc">
+                            스프린트를 사용하고 작업의 우선순위를 지정하여 타임라인으로 프로젝트 진행을 관리 합니다.
+                        </p>
+                    </div>
+                </div>
+                <div class="form_group">
+                    <label for="" class="tit">VISIBILITY</label>
+                    <div class="form_item">
+                        <select class="comm_select tp_middle wide" id="" style="min-width:120px;">
+                            <option value="1">Private</option>
+                            <option value="2">Workspace</option>
+                            <option value="3">Public</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popup_footer ar">
+            <button type="button" class="btn btn_small btnCancle">Cancel</button>
+            <button type="button" class="btn btn_small btn_purple" id="btnSave">PROJECT 생성</button>
+        </div>
+    </div>
+
+    <!--E: 팝업 -->
+
+    <!-- 스크립트 영역  -->
+    <script src="../assets/js/commjs.js"></script>
+    <script src="../assets/js/modal.js"></script>
+    <script src="../assets/js/popup.js"></script>
+
+    <script>
+
+        let workSpaces = document.querySelectorAll('[data-id="workSpaceCreate"]');
+        for(let workSpace of workSpaces){
+            workSpace.addEventListener("click", function(){
+                let pop = document.querySelector('#workSpaceStep1');
+                pop.open({
+                    'headerTitle' : 'NEW WORKSPACE',
+                    'data' : null,
+                    'width' : 600,
+                    'height' : null,
+                    'callBack' : null,
+                });  
+            });
+        }
+
+        document.querySelector('[data-id="workSpaceCreateStep2"]').addEventListener('click', function(){
+            let pop1 = document.querySelector('#workSpaceStep1');
+            let pop2 = document.querySelector('#workSpaceStep2');
+            pop1.close();
+            pop2.open({
+                'headerTitle' : '',
+                'data' : null,
+                'width' : 600,
+                'height' : null,
+                'callBack' : null,
+            });  
+        });
+
+        let projectStep1 = document.querySelectorAll('[data-id="projectCreate"]');
+        for(let project of projectStep1){
+            project.addEventListener("click", function(){
+                let pop = document.querySelector('#projectStep1');
+                pop.open({
+                    'headerTitle' : 'NEW PROJECT',
+                    'data' : null,
+                    'width' : 500,
+                    'height' : null,
+                    'callBack' : null,
+                });  
+            });
+        }
+
+        document.querySelector('[data-id="projectCreateStep2"]').addEventListener('click', function(){
+            let pop1 = document.querySelector('#projectStep1');
+            let pop2 = document.querySelector('#projectStep2');
+            pop1.close();
+            pop2.open({
+                'headerTitle' : '',
+                'data' : null,
+                'width' : 500,
+                'height' : null,
+                'callBack' : null,
+            });  
+        });
+
+    </script>
+
+</body>
+</html>

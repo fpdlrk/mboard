@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>팝업</title>
+    <link href="../assets/css/import.css" type="text/css" rel="stylesheet">
+    <script src="../assets/js/jquery-2.2.4.js"></script>
+    
+</head>
+<body>
+
+    <button type="button" id="btn_pwChange" class="btn">비밀번호 변경</button>
+
+    <div id="pwChangePopup" class="commPopup tp_popup">
+        <div class="pop_header">
+            <h2 id="popTitle"></h2>
+        </div>
+        <div class="pop_body">
+            <div class="form_group">
+                <div class="form_group">
+                    <label for="" class="tit">현재 비밀번호</label>
+                    <div class="form_item">
+                        <input type="password" class="comm_input tp_lg" placeholder="Enter Name" />
+                    </div>
+                </div>
+                <div class="form_group">
+                    <label for="" class="tit">새 비밀번호</label>
+                    <div class="form_item">
+                        <input type="password" class="comm_input tp_lg" placeholder="Enter Company" />
+                    </div>
+                </div>
+                <div class="form_group">
+                    <label for="" class="tit">새 비밀번호 확인</label>
+                    <div class="form_item">
+                        <input type="password" class="comm_input tp_lg" placeholder="Enter Company" />
+                    </div>
+                </div>
+            </div>
+            <div class="popInfoTxt">
+                <ul class="bullet_list">
+                    <li>비밀번호의 길이는 영문, 숫자 혼합하여 최소 8자리 이상 20자리 이하로 설정해야 합니다.</li>
+                    <li>3자 이상의 연속되거나 반복된 문자, 숫자는 사용할 수 없습니다.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="popup_footer ar">
+            <button type="button" class="btn btn_small btnCancle">Cancel</button>
+            <button type="button" class="btn btn_small btn_purple btnOk" id="btnSave">Save</button>
+        </div>
+    </div>
+
+    <!-- 스크립트 영역  -->
+    <script src="../assets/js/popup.js"></script>
+    <script>
+        $('#btn_pwChange').on('click', function(){
+            let test = document.querySelector('#pwChangePopup');
+            let pop = test.open({
+                'popId' : 'pwChangePopup',
+                'headerTitle' : '비밀번호 변경',
+                'data' : null,
+                'width' : 600,
+                'height' : null,
+                'callBack' : null,
+            });
+            setTimeout(function(){
+                //test.close();
+                //console.log(pop.init())
+            }, 500);
+
+
+            
+            
+        });
+
+        
+
+        let okClickFnc = (e) => {
+            PopupClose(e.target);
+            console.log('외부=okClickFnc----', e, e.target);
+        }
+
+        let cancleClickFnc = (e) => {
+            PopupClose(e.target);
+            console.log('외부=cancleClickFnc====', e.target);
+        }
+    </script>
+</body>
+</html>

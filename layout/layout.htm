@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link type="text/css" href="../assets/css/import.css" rel="stylesheet">
+    <link type="text/css" href="../assets/css/simplebar.css" rel="stylesheet">
+    <script type="text/javascript" src="../assets/js/jquery-2.2.4.js"></script>
+    <script type="text/javascript" src="../assets/js/simplebar.min.js"></script>
+</head>
+<body>
+
+    
+    <div class="wrap">
+        <div class="wrap_container full_container">
+            <!--S: 메뉴가 있는 layout -->
+            <div class="menu_area">
+                <div class="comname">
+                    MINDBOARD
+                </div>
+
+                
+                
+                <div class="lnb_outer" data-simplebar="init">
+                    <div class="lnb">
+                        <div class="item">
+                            <div class="afa_area">
+                                <div class="label_item">
+                                    <span class="FirstName_label comm_label"></span><span class="labelFirstName">LS</span>
+                                </div>
+                            </div>
+                            <ul class="dep_ul">
+                                <li class="selected"><a href="#" class="menu selected">Projects</a>
+                                    <ul class="dep_ul">
+                                        <li>
+                                            <a href="#" class="menu">
+                                                <div class="labelText _template _tmpS">S</div>IPMS
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="menu">
+                                                <div class="labelText _template _tmpG">G</div>DOSIRAK
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="menu">
+                                                <div class="labelText _template _tmpK">K</div>MELON
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="#" class="menu">Members</a></li>
+                                <li><a href="#" class="menu">Settings</a></li>
+                            </ul>
+                            <button type="button" class="toggle">toggle</button>
+                        </div>
+
+                        <div class="item">
+                            <div class="afa_area">
+                                <div class="label_item">
+                                    <span class="FirstName_label comm_label"></span><span class="labelFirstName">Genie</span>
+                                </div>
+                            </div>
+                            <ul>
+                                <li><a href="#">Projects</a></li>
+                                <li><a href="#">Members</a></li>
+                                <li><a href="#">Settings</a></li>
+                            </ul>
+                            <button type="button" class="toggle">toggle</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="btn_create_wrap">
+                    <button type="button" class="btn btn_red btn_lager wide">WORKSPACE CREATE</button>
+                </div>
+
+                <div class="lnb_btm">
+                    <div class="afa_area">
+                        <div class="label_item">
+                            <span class="FirstName_label comm_label"></span><span class="labelFirstName">Summer Lee<em class="s_info">Admin</em></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--E: 메뉴가 있는 layout -->
+            <div class="screen_area">
+
+                <div class="header_area">
+                    <!--S: 프로젝트 경로  -->
+                        <div class="location_area">
+                            <div class="location_wrap">
+                                <ul class="location_items">
+                                    <li><a href="#">LS</a></li>
+                                    <li><a href="#">GQMS</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="util_items">
+                                <div class="item">
+                                    <div class="members_wrap">
+                                        <div class="afa_area">
+                                            <div class="label_item">
+                                                <span class="FirstName_label comm_label">L</span>
+                                                <span class="labelFirstName">주현우</span>
+                                            </div>
+                                        </div>
+                                        <div class="afa_area">
+                                            <div class="label_item">
+                                                <span class="FirstName_label comm_label">L</span>
+                                                <span class="labelFirstName">홍차장</span>
+                                            </div>
+                                        </div>
+                                        <div class="afa_area">
+                                            <div class="label_item">
+                                                <span class="FirstName_label comm_label">L</span>
+                                                <span class="labelFirstName">민귀홍</span>
+                                            </div>
+                                        </div>
+                                        <div class="more_member">+3</div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="share_wrap">
+                                        <button type="button" class="btn btn_red btn_mini" data-id="btnShare">share</button>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="meatball_wrap">
+                                        <button type="button" class="btn_meatball">...</button>
+                                        <div class="meatball_body">
+                                            <div class="item">메뉴예정</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <!--E: 프로젝트 경로  -->
+
+                    <!--S: 페이지 상단 타이틀  -->
+                    <div class="pg_title_wrap">
+                        <h2 class="tit">GQMS</h2>
+                        <div class="util">
+                            <div class="filter_wrap">
+                                <button type="button" class="btn btn_small btn_filter">Filter</button>
+                            </div>
+                            <div class="sort_wrap">
+                                <button type="button" class="btn btn_small btn_sort">sort</button>
+                            </div>
+                            <div class="search_wrap">
+                                <div class="form_group">
+                                    <div class="form_item">
+                                        <div class="flex_box">
+                                            <input type="text" class="comm_input tp_small" placeholder="Search Word">
+                                            <button type="button" class="btn btn_small btn_purple w100 mgl5" id="">Search</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--E: 페이지 상단 타이틀  -->
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <!--S: 팝업 -->
+    <div id="sharePopup" class="commPopup tp_popup sharePopup">
+        <div class="pop_header">
+            <h2 id="popTitle"></h2>
+        </div>
+        <div class="pop_body">
+
+            
+            <div class="form_group">
+                <div class="form_group">
+                    <div class="form_item">
+                        <div class="flex_box">
+                            <input type="text" class="comm_input tp_lg" placeholder="Email address or name">
+                            <button type="button" class="btn btn_purple w100 mgl5" id="">Share</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="labelText">
+                You have <em class="f_bold">full access</em> to this workspace
+            </div>
+            <div class="labelText _warning">
+                You have <em class="f_bold">edit access</em> to this workspace
+            </div>
+
+            <p class="access_text">People with access this project</p>
+            <div class="workspace_box _sm">
+            <!-- 참여중인 workspace Area -->
+                <div class="item">
+                    <div class="afa_area">
+                        <div class="label_item">
+                            <span class="FirstName_label comm_label">L</span>
+                            <span class="labelFirstName">서창호
+                                <em class="members">chseo@mindpro.co.kr</em>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="btn_area">
+                        <button type="button" class="btn btn_black btn_mini wide">Member</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="afa_area">
+                        <div class="label_item">
+                            <span class="FirstName_label comm_label">O</span>
+                            <span class="labelFirstName">주현후
+                                <em class="members">chseo@mindpro.co.kr</em>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="btn_area">
+                        <button type="button" class="btn btn_black btn_mini wide">Member</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="popup_footer ar">
+            <button type="button" class="btn btn_small btnCancle">Cancel</button>
+            <button type="button" class="btn btn_small btn_purple" data-id="workSpaceCreateStep2">Continue</button>
+        </div>
+    </div>
+    <!--E: 팝업 -->
+
+    <!-- 스크립트 영역  -->
+    <script src="../assets/js/commjs.js"></script>
+    <script src="../assets/js/modal.js"></script>
+    <script src="../assets/js/popup.js"></script>
+
+    <script>
+        let btnShares = document.querySelectorAll('[data-id="btnShare"]'); // 버튼
+        for(let btnShare of btnShares){
+            btnShare.addEventListener("click", function(){
+                let pop = document.querySelector('#sharePopup'); // 팝업 아이템
+                pop.open({
+                    'headerTitle' : 'Share project',
+                    'data' : null,
+                    'width' : 600,
+                    'height' : null,
+                    'callBack' : null,
+                });  
+            });
+        }
+    </script>
+
+    
+
+    <!-- <script type="module">
+        import {commjs} from '../assets/js/commjs.js';
+        $('.labelFirstName').each(function(i,v){
+            let str = $(v).text();
+            $('.FirstName_label').text(commjs.nameFirstAt(str));
+        });
+    </script> -->
+
+</body>
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link type="text/css" href="../assets/css/import.css" rel="stylesheet">
+    <link type="text/css" href="../assets/css/simplebar.css" rel="stylesheet">
+    <script type="text/javascript" src="../assets/js/jquery-2.2.4.js"></script>
+    <script type="text/javascript" src="../assets/js/simplebar.min.js"></script>
+</head>
+<body>
+
+    
+    <div class="wrap">
+        <div class="wrap_container full_container">
+            <!--S: 메뉴가 있는 layout -->
+            <div class="menu_area">
+                <div class="comname">
+                    MINDBOARD
+                </div>
+
+                <div class="btn_create_wrap">
+                    <button type="button" class="btn btn_black btn_middle wide">WORKSPACE CREATE</button>
+                </div>
+                
+                <div class="lnb_outer" data-simplebar="init">
+                    <div class="lnb">
+                        <div class="item">
+                            <div class="afa_area">
+                                <div class="label_item">
+                                    <span class="FirstName_label comm_label"></span><span class="labelFirstName">LS</span>
+                                </div>
+                            </div>
+                            <ul>
+                                <li class="selected"><a href="#" class="selected">Projects</a></li>
+                                <li><a href="#">Members</a></li>
+                                <li><a href="#">Settings</a></li>
+                            </ul>
+                            <button type="button" class="toggle">toggle</button>
+                        </div>
+
+                        <div class="item">
+                            <div class="afa_area">
+                                <div class="label_item">
+                                    <span class="FirstName_label comm_label"></span><span class="labelFirstName">Genie</span>
+                                </div>
+                            </div>
+                            <ul>
+                                <li><a href="#">Projects</a></li>
+                                <li><a href="#">Members</a></li>
+                                <li><a href="#">Settings</a></li>
+                            </ul>
+                            <button type="button" class="toggle">toggle</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="lnb_btm">
+                    <div class="afa_area">
+                        <div class="label_item">
+                            <span class="FirstName_label comm_label"></span><span class="labelFirstName">Summer Lee<em class="s_info">Admin</em></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--E: 메뉴가 있는 layout -->
+            <div class="screen_area">
+
+                <div class="header_area _gnb">
+                    <div class="gnb">
+                        <ul>
+                            <li class="selected"><a href="#" class="selected">My profile</a></li>
+                            <li><a href="#">My Enquiries</a></li>
+                            <li><a href="#">Settings</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="content_area" data-simplebar="init">
+                    
+                    <div class="my_info_outer">
+                        <div class="my_info _modify">
+                            <div class="afa_area">
+                                <div class="label_item">
+                                    <span class="FirstName_label comm_label"></span><span class="labelFirstName">Summer Lee<em class="s_info">seullee@gmail.com</em></span>
+                                </div>
+                            </div>
+                            <div class="form_group">
+                                <div class="form_group">
+                                    <label for="" class="tit">연락처</label>
+                                    <div class="form_item">
+                                        <input type="text" class="comm_input tp_lg" placeholder="Enter Name" />
+                                    </div>
+                                </div>
+                                <div class="form_group">
+                                    <label for="" class="tit">비밀번호</label>
+                                    <div class="form_item">
+                                        <button type="button" class="btn btn_black btn_small w100" id="btn_pwChange">수정</button>
+                                    </div>
+                                </div>
+                                
+                                <!-- <div class="form_group">
+                                    <label for="" class="tit">2단계 인증</label>
+                                    <div class="form_item">
+                                        <span class="toggle_wrap">
+                                            <input type="checkbox" id="TOGGLE_1" checked="">
+                                            <label for="TOGGLE_1"></label>
+                                        </span>
+                                    </div>
+                                </div> -->
+
+                                <div class="form_group">
+                                    <label for="" class="tit">조직</label>
+                                    <div class="form_item">
+                                        <input type="text" class="comm_input tp_lg" placeholder="Enter Company" />
+                                    </div>
+                                </div>
+                                <div class="form_group">
+                                    <label for="" class="tit">직책</label>
+                                    <div class="form_item">
+                                        <input type="text" class="comm_input tp_lg" placeholder="Enter Department" />
+                                    </div>
+                                </div>
+
+                                <div class="form_group">
+                                    <label for="" class="tit">부서</label>
+                                    <div class="form_item">
+                                        <input type="text" class="comm_input tp_lg" placeholder="Enter Job Title" />
+                                    </div>
+                                </div>
+            
+                                <button type="button" class="btn btn_red  btn_lager wide mgt20">Save</button>
+                                
+                            </div>
+                        </div>
+
+                        <div class="my_info _step2">
+                            <h2 class="tit">2단계 인증 사용 여부</h2>
+                            <div class="labelText">
+                                현재 인증을 미사용 중 입니다.
+                            </div>
+                            <p class="s_txt">
+                                보안을 한 단계 추가하여 계정을 보호하세요. <br />
+                                두 번째 로그인 단계를 사용하면 비밀번호가 유출된 경우에도 계정을 안전하게 보호할 수 있습니다. 
+                                스마트폰만 있으면 사용할 수 있습니다.
+                            </p>
+                            
+                            <div class="form_group">
+                                <div class="form_group">
+                                    <label for="" class="tit ess">Password </label>
+                                    <div class="form_item">
+                                        <input type="text" class="comm_input tp_lg" placeholder="Enter password" />
+                                    </div>
+                                </div>
+
+                                <div class="spc_tit">휴대전화 설정</div>
+                                <div class="form_group">
+                                    <label for="" class="tit ess">Phone Number</label>
+                                    <div class="form_item">
+                                        <div class="flex_box">
+                                            <input type="text" class="comm_input tp_lg" placeholder="Enter password" />
+                                            <button type="button" class="btn btn_black_line w100 mgl5" id="">Send</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form_group">
+                                    <label for="" class="tit">코드 입력</label>
+                                    <div class="form_item">
+                                        <div class="flex_box">
+                                            <input type="text" class="comm_input tp_lg" placeholder="Enter password" />
+                                            <button type="button" class="btn btn_purple w100 mgl5" id="">Next</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- <button type="button" class="btn btn_red  btn_lager wide mgt20">Next</button> -->
+                                <span class="toggle_wrap" id="certiToggle">
+                                    <input type="checkbox" id="certiToggleCheck" checked="" />
+                                    <label for="certiToggleCheck"></label>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--S: 팝업 -->
+
+    <div id="pwChangePopup" class="commPopup tp_popup">
+        <div class="pop_header">
+            <h2 id="popTitle"></h2>
+        </div>
+        <div class="pop_body">
+            <div class="form_group">
+                <div class="form_group">
+                    <label for="" class="tit">현재 비밀번호</label>
+                    <div class="form_item">
+                        <input type="password" class="comm_input tp_lg" placeholder="Enter Name" />
+                    </div>
+                </div>
+                <div class="form_group">
+                    <label for="" class="tit">새 비밀번호</label>
+                    <div class="form_item">
+                        <input type="password" class="comm_input tp_lg" placeholder="Enter Company" />
+                    </div>
+                </div>
+                <div class="form_group">
+                    <label for="" class="tit">새 비밀번호 확인</label>
+                    <div class="form_item">
+                        <input type="password" class="comm_input tp_lg" placeholder="Enter Company" />
+                    </div>
+                </div>
+            </div>
+            <div class="popInfoTxt">
+                <ul class="bullet_list">
+                    <li>비밀번호의 길이는 영문, 숫자 혼합하여 최소 8자리 이상 20자리 이하로 설정해야 합니다.</li>
+                    <li>3자 이상의 연속되거나 반복된 문자, 숫자는 사용할 수 없습니다.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="popup_footer ar">
+            <button type="button" class="btn btn_small btnCancle">Cancel</button>
+            <button type="button" class="btn btn_small btn_purple btnOk" id="btnSave">Save</button>
+        </div>
+    </div>
+
+    <!--E: 팝업 -->
+
+    <!-- 스크립트 영역  -->
+    <script src="../assets/js/commjs.js"></script>
+    <script src="../assets/js/modal.js"></script>
+    <script src="../assets/js/popup.js"></script>
+    <script>
+        $('#btn_pwChange').on('click', function(){
+            let pop = document.querySelector('#pwChangePopup');
+            pop.open({
+                'popId' : 'pwChangePopup',
+                'headerTitle' : '비밀번호 변경',
+                'data' : null,
+                'width' : 600,
+                'height' : null,
+                'callBack' : null,
+            });  
+        });
+
+        
+
+        let okClickFnc = (e) => {
+            PopupClose(e.target);
+            console.log('외부=okClickFnc----', e, e.target);
+        }
+
+        let cancleClickFnc = (e) => {
+            PopupClose(e.target);
+            console.log('외부=cancleClickFnc====', e.target);
+        }
+    </script>
+
+</body>
+</html>

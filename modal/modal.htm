@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>팝업</title>
+    <link href="../assets/css/import.css" type="text/css" rel="stylesheet">
+    <script src="../assets/js/jquery-2.2.4.js"></script>
+    
+</head>
+<body>
+
+    <button type="button" id="popAlert" class="btn">얼럿</button>
+    <button type="button" id="popAlert2" class="btn">얼럿(상단 header 없을 시)</button>
+    <button type="button" id="popConfirm" class="btn">컨핌</button>
+
+    <!-- 스크립트 영역  -->
+    <script src="../assets/js/commjs.js"></script>
+    <script src="../assets/js/modal.js"></script>
+    <script src="../assets/js/popup.js"></script>
+    <script>
+        $('#popAlert').on('click', function(){
+            ModalOpen('firstPopup', '알림', '내용', 'alert', okClickFnc, '', {});
+        });
+
+        $('#popAlert2').on('click', function(){
+            ModalOpen('firstPopup', '', '내용', 'alert', '', '', {});
+        });
+
+        $('#popConfirm').on('click', function(){
+            ModalOpen('firstPopup', '타이틀', '내용', 'confirm', okClickFnc, cancleClickFnc, {});
+        });
+
+        let okClickFnc = (e) => {
+            ModalClose(e.target);
+            console.log('외부=okClickFnc----', e, e.target);
+        }
+
+        let cancleClickFnc = (e) => {
+            ModalClose(e.target);
+            console.log('외부=cancleClickFnc====', e.target);
+        }
+    </script>
+</body>
+</html>

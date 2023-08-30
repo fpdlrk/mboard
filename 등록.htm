@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="assets/css/import.css">
+    <script src="assets/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="assets/js/moment.min.js"></script>
+    <script type="text/javascript" src="assets/js/daterangepicker.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/daterangepicker.css" />
+    <script src="assets/js/common.js"></script>
+    <title>프로모션 등록</title>
+</head>
+<body>
+    <div class="wrap">
+        <!-- 상단 -->
+        <header class="header">
+            <div class="header_body">
+                <div class="logo">
+                    <h1><a href="#"><img src="assets/img/logo.png" alt="요기요" /></a></h1>
+                    <p>제휴사 프로모션 지원 페이지</p>
+                </div>
+                <div class="top_right">
+                    <div class="gnb">
+                        <ul>
+                            <li class="selected"><a href="#">프로모션 등록</a></li>
+                            <li><a href="#">프로모션 리스트</a></li>
+                            <li><a href="#">제휴사 정보 수정</a></li>
+                        </ul>
+                    </div>
+                    <button type="button" class="btn_logout">로그아웃</button>
+                </div>
+            </div>
+        </header>
+        <!--// 상단 -->
+
+        <!-- 컨테이너 -->
+        <div class="container">
+
+            <!-- 컨텐츠 -->
+            <div class="contents register_page">
+                <div class="company_select">
+                    <select class="comm_select" id="" style="min-width:300px;">
+                        <option value="">브랜드 선택</option>
+                    </select>
+                </div>
+                <div class="promo_register">
+                    
+                    <!-- 프로모션 형태 -->
+                    <div class="item_box">
+                        <div class="item_header">프로모션 형태</div>
+                        <div class="item_body">
+
+                            <div class="form_group">
+                                <div class="form_item">
+                                    <span class="radio_b_wrap tp_button">
+                                        <input type="radio" class="chk" name="1">
+                                        <div class="box"></div>
+                                        <span class="txt">배달</span>
+                                    </span>
+                                </div>
+                                <div class="form_item">
+                                    <span class="radio_b_wrap tp_button">
+                                        <input type="radio" class="chk" name="1">
+                                        <div class="box"></div>
+                                        <span class="txt">방문포장</span>
+                                    </span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!--// 프로모션 형태 -->
+
+                    <!-- 기간설정 -->
+                    <div class="item_box">
+                        <div class="item_header">
+                            <span>기간설정</span>
+                            <button type="button" class="promo_add">프로모션 추가 +</button>
+                        </div>
+                        <div class="item_body">
+                            <div class="period">
+                                <h2 class="f_12 mgb5">프로모션 기간</h2>
+                                <input type="text" name="daterange" class="comm_input tp_lg wide ac" />
+                            </div>
+                            <div class="radio_select">
+                                <span class="radio_b_wrap tp_circle">
+                                    <input type="radio" class="chk" name="3" id="RADIO_PERIOD" />
+                                    <span class="ico"></span>
+                                    <span class="txt">기간전체</span>
+                                </span>
+                                <span class="radio_b_wrap tp_circle mgl10">
+                                    <input type="radio" class="chk" name="3" id="RADIO_DAY" />
+                                    <span class="ico"></span>
+                                    <span class="txt">요일</span>
+                                </span>
+                            </div>
+                            
+                            <div class="opt_wrap">
+                                <!-- 요일일 경우 -->
+                                <div class="period_opt">
+                                    <div class="set_day">
+                                        <label for="su">
+                                            <input type="checkbox" id="su" value="일" class="chk" name="1" />
+                                            <span>일</span>
+                                        </label>
+                                        <label for="mo">
+                                            <input type="checkbox" id="mo" value="월" class="chk" name="1" />
+                                            <span>월</span>
+                                        </label>
+                                        <label for="tu">
+                                            <input type="checkbox" id="tu" value="화" class="chk" name="1" />
+                                            <span>화</span>
+                                        </label>
+                                        <label for="we">
+                                            <input type="checkbox" id="we" value="수" class="chk" name="1" />
+                                            <span>수</span>
+                                        </label>
+                                        <label for="th">
+                                            <input type="checkbox" id="th" value="목" class="chk" name="1" />
+                                            <span>목</span>
+                                        </label>
+                                        <label for="fr">
+                                            <input type="checkbox" id="fr" value="금" class="chk" name="1" />
+                                            <span>금</span>
+                                        </label>
+                                        <label for="sa">
+                                            <input type="checkbox" id="sa" value="토" class="chk" name="1" />
+                                            <span>토</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <!--// 요일일 경우 -->
+
+                                <!-- 프로모션 기간 텍스트 노출 -->
+                                <div class="promo_status">
+                                    <!-- <p>2022.05.15 ~ 2022.05.30</p>
+                                    에 프로모션을 진행 합니다. -->
+                                    프로모션의 진행 옵션을 선택해주세요.
+                                </div>
+                                <!--// 프로모션 기간 텍스트 노출 -->
+
+                            </div>
+                            
+
+                        </div>
+                    </div>
+                    <script>
+                        $(function(){
+                            var startDay = '';
+                            var endDay = '';
+                            var flag = false;
+                            var dayArr = []
+                            var date = new Date();
+                            var currentMonth = date.getMonth();
+                            var currentDate = date.getDate();
+                            var currentYear = date.getFullYear();
+                            $('input[name="daterange"]').daterangepicker({
+                                minDate: new Date(currentYear, currentMonth, currentDate),
+                                // dateLimit: { days: 30 },
+                                // showDropdowns: true,
+                                locale: {
+                                    "format": "YYYY.MM.DD",
+                                    "separator": " ~ ",
+                                    "applyLabel": "적용",
+                                    "cancelLabel": "취소",
+                                    "fromLabel": "From",
+                                    "toLabel": "To",
+                                    "customRangeLabel": "Custom",
+                                    "daysOfWeek": ["일","월","화","수","목","금","토"],
+                                    "monthNames": ["1월","2월","3월","4월","5월","6월","7월","8월","9월","10월","11월","12월"],
+                                    "firstDay": 1
+                                },
+                            },
+                            function(start, end, label) {
+                                flag = true;
+                                $(".radio_select input[type='radio']").removeAttr("disabled","");
+                                $(".radio_select input[type='radio']").removeProp("disabled",false);
+                                startDay = start.format('YYYY.MM.DD');
+                                endDay = end.format('YYYY.MM.DD');
+                                $("#RADIO_PERIOD").trigger("click");
+                                
+                            });
+
+                            $(document).on("click", ".radio_select input[type='radio']", function(e){
+                                var $this = $(this);
+                                var id_name = $this.attr("id");
+                                if(!flag){
+                                    alert("기간을 먼저 선택해주세요");
+                                    return false;
+                                }else{
+                                    if($this.is(":checked") && id_name == "RADIO_DAY"){
+                                        $(".period_opt").show();
+                                        promoStatusTxt('요일선택')
+                                    }else{
+                                        $(".period_opt").hide();
+                                        var date = startDay + ' ~ ' + endDay;
+                                        promoStatusTxt(date)
+                                    }
+                                    $(".promo_status").append('에 프로모션을 진행 합니다.');
+                                } 
+								fn_loading();
+                            });
+
+                            // 요일 날짜 선택시 상태 텍스트 변경
+                            $(document).on("click", ".set_day input[type='checkbox']", function(){
+                                var day = $(this).val();
+                                if($(this).is(":checked")){
+                                    dayArr.push(day);
+                                    promoStatusTxt(dayArr)
+                                }else{
+                                    var data = dayArr.filter(function(element){
+                                        return element != day
+                                    });
+                                    dayArr = data;
+                                    promoStatusTxt(data)
+                                }
+                            });
+                        });
+
+                        // 기간-요일 라디오버튼 클릭시 하단 상태 텍스트를 변경합니다.
+                        function promoStatusTxt(obj){
+                            $(".promo_status").empty();
+                            $(".promo_status").append('<p>' + obj + '</p>');
+                            $(".promo_status").append('에 프로모션을 진행 합니다.');
+                        }
+                    </script>
+                    <!--// 기간설정 -->
+
+                    <!-- 프로모션 구문 -->
+                    <div class="item_box">
+                        <div class="item_header">프로모션 구문</div>
+                        <div class="item_body">
+                            <div class="form_group" id="MENU_SELECT">
+                                <div class="form_item">
+                                    <span class="radio_b_wrap tp_button">
+                                        <input type="radio" class="chk" name="2">
+                                        <div class="box"></div>
+                                        <span class="txt">전 메뉴</span>
+                                    </span>
+                                </div>
+                                <div class="form_item">
+                                    <span class="radio_b_wrap tp_button">
+                                        <input type="radio" class="chk" name="2" id="MENU_SALE">
+                                        <div class="box"></div>
+                                        <span class="txt">메뉴 할인</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div id="menu_item">
+                                <ul>
+                                    <li>
+                                        <span class="check_b_wrap mgt10">
+                                            <input type="checkbox" class="chk" name="1">
+                                            <span class="ico"></span>
+                                            <span>콩밥</span>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="check_b_wrap mgt10">
+                                            <input type="checkbox" class="chk" name="1">
+                                            <span class="ico"></span>
+                                            <span>흰밥</span>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="check_b_wrap mgt10">
+                                            <input type="checkbox" class="chk" name="1">
+                                            <span class="ico"></span>
+                                            <span>잡곡밥</span>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="check_b_wrap mgt10">
+                                            <input type="checkbox" class="chk" name="1">
+                                            <span class="ico"></span>
+                                            <span>햇반</span>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--// 프로모션 구문 -->
+
+                    <!-- 할인 금액 -->
+                    <div class="item_box">
+                        <div class="item_header">할인 금액</div>
+                        <div class="item_body">
+                            <div class="form_group">
+                                <div class="form_item">
+                                    <h2 class="tit">본사</h2>
+                                    <div class="form_item">
+                                        <input type="text" class="comm_input tp_lg ar" value="" placeholder="0" />
+                                    </div>
+                                </div>
+                                <div class="form_item">
+                                    <h2 class="tit">가맹점</h2>
+                                    <div class="form_item">
+                                        <input type="text" class="comm_input tp_lg ar" value="" placeholder="0" />
+                                    </div>
+                                </div>
+                                <div class="form_item">
+                                    <h2 class="tit">최소 주문 허들</h2>
+                                    <div class="form_item">
+                                        <input type="text" class="comm_input tp_lg ar" value="" placeholder="0" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--// 할인 금액 -->
+
+                </div>
+                <div class="page_btm mgt30">
+                    <div class="col_left"></div>
+                    <div class="col_right">
+                        <button type="button" class="btn btn_red btn_login f_16" style="width:190px;">등록</button>
+                    </div>
+                </div>
+            </div>
+            <!--// 컨텐츠 -->
+        </div>
+        <!--// 컨테이너 -->
+
+    </div>
+
+    <script>
+        // $("#MENU_SALE").prop("checked", true);
+        $(document).on("change", "#MENU_SELECT input[type='radio']", function(){
+            if($("#MENU_SALE").is(":checked")){
+                $("#menu_item").show();
+            }else{
+                $("#menu_item").hide();
+            }
+        });
+        // 프로모션 메뉴 할인 초기 선택 시 하단 메뉴 노출
+        // $("#MENU_SALE").trigger("click");
+    </script>
+
+</body>
+</html>

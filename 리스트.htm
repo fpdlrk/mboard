@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="assets/css/import.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/jquery-ui.css">
+    <script src="assets/js/jquery-1.9.1.min.js"></script>
+    <script src="assets/js/jquery-ui.js"></script>
+    <script src="assets/js/common.js"></script>
+    <title>리스트</title>
+</head>
+<body>
+    <div class="wrap">
+        <!-- 상단 -->
+        <header class="header">
+            <div class="header_body">
+                <div class="logo">
+                    <h1><a href="#"><img src="assets/img/logo.png" alt="요기요" /></a></h1>
+                    <p>제휴사 프로모션 지원 페이지</p>
+                </div>
+                <div class="top_right">
+                    <div class="gnb">
+                        <ul>
+                            <li><a href="#">프로모션 등록</a></li>
+                            <li class="selected"><a href="#">프로모션 리스트</a></li>
+                            <li><a href="#">제휴사 정보 수정</a></li>
+                        </ul>
+                    </div>
+                    <button type="button" class="btn_logout">로그아웃</button>
+                </div>
+            </div>
+        </header>
+        <!--// 상단 -->
+
+        <!-- 컨테이너 -->
+        <div class="container">
+            <!-- 컨텐츠 -->
+            <div class="contents">
+
+                <!-- 페이지 상단 검색 -->
+                <div class="board_search">
+                    <div class="item_group">
+                        <div class="item">
+                            <select class="comm_select tp_middle" id="" style="min-width:120px;">
+                                <option value="">전체</option>
+                            </select>
+                        </div>
+                        <div class="item">
+                            <select class="comm_select tp_middle" id="" style="min-width:230px;">
+                                <option value="">전체 브랜드</option>
+                                <option value="">전체</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="item_group">
+                        <span class="tit">기간</span>
+                        <div class="item">
+                            <input type="text" class="comm_input tp_middle datepicker" placeholder="" style="width:150px;" />
+                        </div>
+                        <span class="space">~</span>
+                        <div class="item">
+                            <input type="text" class="comm_input tp_middle datepicker" placeholder="" style="width:150px;" />
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn_middle btn_black btn_serach">검색</button>
+                </div>
+                <!--// 페이지 상단 검색 -->
+
+                <div class="table_wrap">
+                    <table class="tbl_list">
+                        <colgroup>
+                            <col style="width:80px;">
+                            <col style="width:12%;">
+                            <col style="width:12%;">
+                            <col style="width:20%;">
+                            <col style="width:90px;">
+                            <col style="width:90px;">
+                            <col style="width:120px;">
+                            <col style="width:120px;">
+                            <col style="width:90px;">
+                            <col>
+                            <col style="width:120px;"> 
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">No.</th>
+                                <th scope="col">프로모션 종류</th>
+                                <th scope="col">프로모션 구분</th>
+                                <th scope="col">기간</th>
+                                <th scope="col">금액</th>
+                                <th scope="col">상태</th>
+                                <th scope="col">등록일</th>
+                                <th scope="col">수정일</th>
+                                <th scope="col">변경이력</th>
+                                <th scope="col">반려사유</th>
+                                <th scope="col">수정/삭제</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>8</td>
+                                <td>배달 + 방문포장</td>
+                                <td>메뉴 할인</td>
+                                <td class="al">2,4,5,6,7,12,15,18,20</td>
+                                <td class="ar">3,000원</td>
+                                <td><span class="f_bold f_blue">승인</span></td>
+                                <td>2022.05.15</td>
+                                <td>2022.05.15</td>
+                                <td>
+                                    <button type="button" class="btn btn_small tp_ico" onclick="fn_sidePopup('history')"><span class="ico _paper"></span><em class="alarm">수정</em></button>
+                                </td>
+                                <td class="al"></td>
+                                <td>
+                                    <button type="button" class="btn btn_small btn_black">수정</button>
+                                    <button type="button" class="btn btn_small btn_gray_line">삭제</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>배달 + 방문포장</td>
+                                <td>메뉴 할인</td>
+                                <td class="al">2,4,5,6,7,12,15,18,20</td>
+                                <td class="ar">3,000원</td>
+                                <td><span class="f_bold f_red">반려</span></td>
+                                <td>2022.05.15</td>
+                                <td>2022.05.15</td>
+                                <td>
+                                    <button type="button" class="btn btn_small tp_ico" onclick="fn_sidePopup('history')"><span class="ico _paper"></span><em class="alarm">삭제</em></button>
+                                </td>
+                                <td class="al">금액 확인 바랍니다.</td>
+                                <td>
+                                    <button type="button" class="btn btn_small btn_black">수정</button>
+                                    <button type="button" class="btn btn_small btn_gray_line" onclick="fn_popup('alert')">삭제</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>배달 + 방문포장</td>
+                                <td>메뉴 할인</td>
+                                <td class="al">2,4,5,6,7,12,15,18,20</td>
+                                <td class="ar">3,000원</td>
+                                <td><span class="f_bold f_red">반려</span></td>
+                                <td>2022.05.15</td>
+                                <td>2022.05.15</td>
+                                <td>
+                                    <button type="button" class="btn btn_small tp_ico" onclick="fn_sidePopup('history')"><span class="ico _paper"></span></button>
+                                </td>
+                                <td class="al">금액 확인 바랍니다.</td>
+                                <td>
+                                    <button type="button" class="btn btn_small btn_black">수정</button>
+                                    <button type="button" class="btn btn_small btn_gray_line" onclick="fn_popup('alert')">삭제</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="11" class="no_data">데이터가 없습니다.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- 페이징 -->
+                <div class="paging_wrap">
+                    <div class="paging_body">
+                        <a href="#" class="go_first" title="첫페이지로 이동"><span>첫 페이지 이동</span></a>
+                        <a href="#" class="go_prev" title="이전페이지로 이동"><span>이전 페이지 이동</span></a>
+                        <span>
+                            <strong title="현재 페이지">1</strong>
+                            <a href="#" title="2페이지로 이동">2</a>
+                            <a href="#" title="3페이지로 이동">3</a>
+                            <a href="#" title="4페이지로 이동">4</a>
+                        </span>
+                        <a href="#" class="go_next"><span>다음</span></a> 
+                        <a href="#" class="go_last"><span>마지막페이지</span></a>
+                    </div>
+                </div>
+                <!--// 페이징 -->
+                
+            </div>
+            <!--// 컨텐츠 -->
+        </div>
+        <!--// 컨테이너 -->
+
+    </div>
+
+    <!-- 팝업 : 얼럿 -->
+    <div class="popup_outer" id="alert">
+        <div class="popup tp_alert">
+            <div class="info_header ico_feel">
+                <p>정말로 삭제하시겠습니까?</p>
+            </div>
+            <!-- <div class="popup_c">
+                <div class="popup_body">
+                    <p class="tit">삭제 하시겠습니까?</p>
+                    <p class="s_txt">로그인을하고 다양한 서비스와 혜택을 만나보세요.</p>
+                </div>
+            </div> -->
+            <div class="popup_b">
+                <div class="btn_g flex_jc">
+                    <button type="button" class="btn btn_red btn_small" style="width:70px;">예</button>
+                    <button type="button" class="btn btn_gray_line btn_small" onclick="fn_pupClose('alert')" style="width:70px;">아니오</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--// 팝업 : 얼럿 -->
+
+    <!-- 팝업 : 변경이력 -->
+    <div class="side_pop" id="history">
+        <div class="popup_wrap size_b">
+            <div class="popup_h exclude">
+                <h2>변경이력</h2>
+            </div>
+            <div class="popup_c">
+                <div class="popup_body">
+                   <div class="his_wrap">
+                    <table class="tbl_list tp_small">
+                        <colgroup>
+                            <col style="width:15%;">
+                            <col style="width:15%;">
+                            <col style="width:25%;">
+                            <col style="width:90px;">
+                            <col style="width:80px;">
+                            <col style="width:90px;">
+                            <col>
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">프로모션 종류</th>
+                                <th scope="col">프로모션 구분</th>
+                                <th scope="col">기간</th>
+                                <th scope="col">금액</th>
+                                <th scope="col">상태</th>
+                                <th scope="col">변경내용</th>
+                                <th scope="col">반려사유</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>배달 + 방문포장</td>
+                                <td>메뉴 할인</td>
+                                <td class="al">2,4,5,6,7,12,15,18,20</td>
+                                <td class="ar">3,000원</td>
+                                <td><span class="f_bold f_blue">승인</span></td>
+                                <td>
+                                    수정
+                                </td>
+                                <td class="al"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="7" class="no_data">데이터가 없습니다.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                   </div>
+                </div>
+                
+            </div>
+            <button type="button" class="btn_close" onclick="fn_closeSide('history')"><span class="ico">닫기</span></button>
+        </div>
+    </div>
+    <!--// 팝업 : 변경이력 -->
+
+    <script>
+        $(function(){
+            $(".datepicker").datepicker({
+                dateFormat : "yy-mm-dd"
+            }).datepicker("setDate", new Date());
+        });
+    </script>
+
+</body>
+</html>

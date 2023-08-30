@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="assets/css/import.css">
+    <script src="assets/js/jquery-1.9.1.min.js"></script>
+    <script src="assets/js/common.js"></script>
+    <title>회원가입</title>
+</head>
+<body>
+    <div class="wrap">
+
+        <!-- 컨테이너 -->
+        <div class="container member_page member_join">
+            <!-- 컨텐츠 -->
+            
+            <div class="contents">
+                <h2>제휴사 회원가입</h2>
+                <div class="content_box tp_flex flex_jb">
+                    <div class="col_left">
+                        <div class="form_group">
+                            <div class="form_group">
+                                <h2 class="tit">제휴사명</h2>
+                                <div class="form_item">
+                                    <input type="text" class="comm_input tp_lg" placeholder="제휴사명 입력" />
+                                </div>
+                            </div>
+                            <div class="form_group">
+                                <h2 class="tit">법인명</h2>
+                                <div class="form_item">
+                                    <input type="text" class="comm_input tp_lg" placeholder="법인명 입력" />
+                                </div>
+                            </div>
+                            <div class="form_group">
+                                <h2 class="tit">사업자등록번호</h2>
+                                <div class="form_item">
+                                    <input type="text" class="comm_input tp_lg" placeholder="사업자 등록번호 입력" />
+                                </div>
+                            </div>
+                            <div class="form_group">
+                                <h2 class="tit">비밀번호 등록</h2>
+                                <div class="form_item">
+                                    <input type="text" class="comm_input tp_lg" placeholder="비밀번호 입력" />
+                                </div>
+                                <div class="form_item">
+                                    <input type="text" class="comm_input tp_lg" placeholder="비밀번호 재 입력" />
+                                </div>
+                            </div>
+                            <div class="form_group">
+                                <h2 class="tit">메일 주소</h2>
+                                <div class="form_item">
+                                    <input type="text" class="comm_input tp_lg" placeholder="이메일 입력" />
+                                </div>
+                            </div>
+                            <div class="form_group">
+                                <h2 class="tit">사업자등록증 사본</h2>
+                                <div class="form_item tp_flex">
+                                    <div class="filebox" id="MAINPHOTO">
+                                        <input class="upload-name" value="파일선택" disabled="disabled">
+                                        <label for="ex_filename1" class="btn btn_black f_16" style="width:150px;"><span>파일첨부</span></label>
+                                        <input type="file" id="ex_filename1" class="upload-hidden">
+                                    </div>
+                                    <div id="potho_view" class="potho_view"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col_right">
+                        <div class="form_group" id="BRAND_ROW">
+                            <div class="form_group" id="BRAND_SEARCH_GROUP">
+                                <h2 class="tit">브랜드명</h2>
+                                <div class="form_item tp_flex">
+                                    <input type="text" class="comm_input tp_lg" placeholder="브랜드명을 입력 후 추가 버튼을 클릭하세요." />
+                                    <button type="button" class="btn btn_black mgl5" style="width:90px;">추가 +</button>
+                                </div>
+                            </div>
+                            <!-- <div class="form_group">
+                                <div class="form_item tp_flex">
+                                    <input type="text" class="comm_input tp_lg" value="뜨레주르" />
+                                    <button type="button" class="btn btn_gray_line btn_del_brand mgl5" style="width:90px;">삭제 -</button>
+                                </div>
+                            </div> -->
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="page_btm mgt30">
+                    <div class="col_left"></div>
+                    <div class="col_right">
+                        <button type="button" class="btn btn_red btn_login f_16" style="width:190px;">회원가입</button>
+                    </div>
+                </div>
+                
+            </div>
+            <!--// 컨텐츠 -->
+        </div>
+        <!--// 컨테이너 -->
+
+    </div>
+
+    <!-- 얼럿 팝업 -->
+    <div class="popup_outer" id="alert">
+        <div class="popup tp_alert">
+            <div class="info_header ico_feel">
+                <p>정말로 삭제하시겠습니까?</p>
+            </div>
+            <!-- <div class="popup_c">
+                <div class="popup_body">
+                    <p class="tit">삭제 하시겠습니까?</p>
+                    <p class="s_txt">로그인을하고 다양한 서비스와 혜택을 만나보세요.</p>
+                </div>
+            </div> -->
+            <div class="popup_b">
+                <div class="btn_g flex_jc">
+                    <button type="button" class="btn btn_red btn_small" style="width:70px;">예</button>
+                    <button type="button" class="btn btn_gray_line btn_small" onclick="fn_pupClose('alert')" style="width:70px;">아니오</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--// 얼럿 팝업 -->
+
+    <script>
+        // 첨부파일
+        $(document).on('change', '.filebox .upload-hidden', function(){
+            var target = $("#potho_view");
+            if(window.FileReader){
+                var reader = new FileReader();
+                reader.onload = function(e){ 
+                        var src = e.target.result; 
+                        target.find("img").remove();
+                        target.append('<img src="' + src + '" />');
+                    }
+                reader.readAsDataURL($(this)[0].files[0]);
+            }
+        });
+
+        // 브랜드명 추가
+        $(document).on("click", "#BRAND_SEARCH_GROUP button", function(){
+            var BRAND_IDX = Math.floor(Math.random() * 100000); // 아이디값을 주기위한 퍼블 확인용 개발시 삭제
+            var inp = $("#BRAND_SEARCH_GROUP input[type=text]");
+            var html = '';
+                html += '<div class="form_group" id="' + BRAND_IDX + '">';
+                html += '<div class="form_item tp_flex">';
+                html += '<input type="text" class="comm_input tp_lg" value="' + inp.val() + '" />';
+                html += '<button type="button" class="btn btn_gray_line btn_del_brand mgl5" style="width:90px;" onclick="brandDel(' + BRAND_IDX + ')">삭제 -</button>';
+                html += '</div>';
+                html += '</div>';
+            if(inp.val() == '' || inp.val() == 'undefined'){
+                alert('브랜드명을 입력하세요');
+                inp.focus();
+                return false;
+            }else{
+                $("#BRAND_ROW").append(html);
+                inp.val('');
+            }
+        });
+
+        // 브랜드명 삭제
+        function brandDel(idx){
+            fn_popup('alert');
+            $("#" + idx).remove();
+        }
+    </script>
+
+</body>
+</html>
