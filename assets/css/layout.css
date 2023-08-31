@@ -70,30 +70,31 @@
 }
 
 /*///// lnb /////*/
-.menu_area {width:300px;background:#f6f8fa;border-right:1px solid #ddd;position: relative;}
+.menu_area {width:250px;background:#f6f8fa;border-right:1px solid #ddd;position: relative;}
 .menu_area .btn_create_wrap {}
 .menu_area .btn_create_wrap .btn {border-radius: 0;}
-.menu_area .comname {padding: 20px 0;font-size: 18px;text-align: center;}
+.menu_area .comname {height: 40px;padding: 10px 0;font-size: 16px;text-align: center;background: #333;color:#fff;display: flex;align-items: center;justify-content: center;}
+.menu_area .comname .logo {}
 .menu_area .afa_area {padding:0;justify-content:start;background: none;}
-.lnb_outer {width:300px;}
-.lnb > .item {padding:20px;position: relative;}
+/* .lnb_outer {width:300px;} */
+.lnb > .item {padding:10px;position: relative;}
 .lnb > .item.hide ul {display:none;}
 .lnb > .item + .item {border-top:1px solid #ddd;}
 .lnb > .item ul {padding: 10px 0 0 10px;line-height: 1.8;}
-.lnb > .item ul li a {display: block;position: relative;}
+.lnb > .item ul li a {padding: 3px 0;display: block;position: relative;}
 .lnb > .item ul li a .labelText {padding: 5px 7px;/* position: relative; */right: 0;/* left: 0; */border-radius: 50%;}
 .lnb > .item ul li a.selected {font-weight: 700;text-decoration: underline;color:var(--main)}
 .lnb > .item ul li a:hover {text-decoration: underline;}
-.lnb > .item ul li ul {padding: 10px 0 10px 6px;line-height: 1.8;}
+.lnb > .item ul li ul {padding: 5px 0 5px 6px;line-height: 1.8;}
 .lnb > .item ul li ul li a:hover {background:#eee;}
-.lnb > .item .toggle {width:30px;height:30px;position: absolute;right:15px;top:15px;background: url('../../assets/img/select_arrow_down.png') no-repeat 50% 50%;font-size: 0;}
+.lnb > .item .toggle {width:30px;height:30px;position: absolute;right: 0px;top: 10px;background: url('../../assets/img/select_arrow_down.png') no-repeat 50% 50%;background-size: 30%;font-size: 0;}
 .lnb > .item .toggle:hover {background-color: #eee;border-radius: 10px;}
-.lnb_btm {width:100%;padding:20px;position: absolute;bottom:0;left:0;background: #eee;}
-.lnb_btm .afa_area {background: none;font-size: 14px;}
+.lnb_btm {width:100%;padding:10px 20px;position: absolute;bottom:0;left:0;background: #eee;}
+.lnb_btm .afa_area {background: none;font-size: 12px;}
 
 
 
-.location_area {padding:5px 20px 5px 20px;display: flex;justify-content: space-between;align-items: center;border-bottom: 1px solid #ddd;background: #f6f8fa;}
+.location_area {height: 40px;padding:5px 20px 5px 20px;display: flex;justify-content: space-between;align-items: center;border-bottom: 1px solid #ddd;background: #f6f8fa;}
 .location_area  .util_items {display: flex;align-items: center;gap: 20px;}
 .location_area  .util_items > .item {}
 
@@ -113,7 +114,7 @@
 .members_wrap .afa_area .labelFirstName {font-size:0;}
 .members_wrap .more_member {padding:0 0 0 5px;font-weight: 700;}
 
-.pg_title_wrap {padding: 15px;display: flex;justify-content: space-between;align-items: center;border-bottom: 1px solid #ddd;}
+.pg_title_wrap {padding: 10px;display: flex;justify-content: space-between;align-items: center;border-bottom: 1px solid #ddd;}
 .pg_title_wrap .tit {font-size: 16px;}
 .pg_title_wrap .util {display: flex;gap: 10px;}
 
@@ -187,8 +188,10 @@ select.templ_select + p.desc {padding: 15px;border: 1px solid #e6e6e6;border-top
 .backlog_wrap .comm_card + .comm_card {margin-top:20px;}
 .backlog_wrap .drag_area {}
 .backlog_wrap .drag_area .drag_body {padding:15px;border:1px solid #ddd;background: #eee;}
-.backlog_wrap .drag_area .drag_body .empty {}
-.backlog_wrap .drag_area .drag_body .item {display: flex;align-items: center;}
+.backlog_wrap .drag_area .drag_body .empty {padding: 40px;text-align: center;}
+.backlog_wrap .drag_area .drag_body .item {padding: 5px 10px 5px 10px;display: flex;align-items: center;border: 1px solid #ddd;background: #fff;border-radius: 4px;}
+.backlog_wrap .drag_area .drag_body .item + .item {margin-top:3px;}
+.backlog_wrap .drag_area .drag_body .item:hover {background: #f0f9ff;}
 .backlog_wrap .drag_area .drag_body .item > span {padding:0 5px 0 5px;}
 .backlog_wrap .drag_area .drag_body .item > span.move {}
 .backlog_wrap .drag_area .drag_body .item > span.name {margin-left:auto;}
@@ -279,9 +282,11 @@ select.templ_select + p.desc {padding: 15px;border: 1px solid #e6e6e6;border-top
 
 
 /*///// UI공통 /////*/
-.afa_area {background: #fff;display: flex;font-size: 20px;font-weight: 700;}
+.afa_area {background: #fff;display: flex;font-size: 16px;font-weight: 700;}
 .afa_area .label_item {display: flex;align-items: center;}
-.afa_area .comm_label {width: 30px;padding: 0 10px;color: #fff;border-radius: 4px;margin: 0 5px 0 0;font-size: 14px;line-height: 2;background: #333;text-align: center;}
+.afa_area .label_item .labelFirstName {line-height: 1.2;}
+.afa_area .label_item .labelFirstName .s_info {font-weight: 400;}
+.afa_area .comm_label {width: 25px;height: 25px;padding: 0 8px;color: #fff;border-radius: 4px;margin: 0 5px 0 0;font-size: 13px;line-height: 1.9;background: #333;text-align: center;}
 .labelFirstName .members,
 .labelFirstName .s_info {display: block;font-size: 12px;color: #999;}
 .bullet_list {}
@@ -505,7 +510,7 @@ select.templ_select + p.desc {padding: 15px;border: 1px solid #e6e6e6;border-top
 /*///// 인풋 /////*/
 .comm_input {
 	display:inline-block;
-	border:1px solid #e6e6e6;
+	border:1px solid #ccc;
 	border-radius: 4px;
 	height:44px;
 	min-width:100px;
@@ -528,7 +533,7 @@ select.templ_select + p.desc {padding: 15px;border: 1px solid #e6e6e6;border-top
 
 .comm_select {
 	display:inline-block;
-	border:1px solid #e6e6e6;
+	border:1px solid #ccc;
 	border-radius: 4px;
 	min-width:100px;
 	height:44px;
