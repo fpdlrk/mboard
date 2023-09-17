@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+
+        // function Item(title, price){
+        //     this.title = title;
+        //     this.price = price;
+        //     this.showPrice = function(){
+        //         console.log(`가격은 ${price}입니다.`);
+        //     }
+        // }
+
+        // const item = new Item("인형", 9000);
+        // item.showPrice();
+
+        // console.log(item);
+
+        // const arr = ["인형","사과", "알타리"];
+
+        // for(let i=0; i< arr.length; i++){
+        //     console.log(`---- ${arr[i]} `);
+        // }
+
+        // let age = 30;
+
+        // function showAge(){
+        //     console.log(age);
+        //     let age = 20;
+        // }
+
+        // showAge();
+
+        let a = "age";
+        const user = {
+            name : 'Mike',
+            [a] : 30
+        }
+
+        console.log(user);
+
+        // let arr1 = [1,2,3,3,4,5,5];
+        // let setArr = new Set([...arr1]);
+        // console.log(setArr);
+
+        let arr1 = ["사과0", "사과1", "물", "배", "물"];
+
+        let filterArr = arr1.filter((item, index) => {
+            // console.log("---->>>>>",item, index);
+            console.log("--indexOf>>>",arr1.indexOf(item));
+            return arr1.indexOf(item)
+        });
+        console.log("----",filterArr);
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
+
+
+this.sample_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+	var objGrid = this.Grid00;
+	var arrG1Cd = []; // 업권코드
+	var arrG1Nm = []; // 업권명칭
+	var arrG2 = []; // 금융기관
+	var dataList; // 검색 리스트
+	var dateArr = [];
+	var dateSet = [];
+	var dedupli = [];
+	var dedupliArr = [];
+	var baseCol = 3; // 리스트 앞에 몇개부터 데이터를 추출할지 정하는 col 수
+	var createCol = this.ds_bankList.colcount - baseCol; // 몇개의 데이터를 col에 붙일지 정하는 수
+		
+	var format = '';
+	
+	var cols = '';
+	var v_headRow = 2; // 검색 리스트
+	
+	var headBandCell1 = '';
+	var headBandCell2 = '';
+	var bodyBandCell = '';
+	var bodydBand1Count = 0;
+	var headBand1Count = 0;
+	var headBand2Count = 0;
+	
+	// 리스트에서 날짜 수집
+	for (var i = 0; i < this.ds_bankList.rowcount; i++) { 
+        var date = this.ds_bankList.getColumn(i, "date"); 
+        dateArr.push(date);
+    }
+	dateSet = new Set(dateArr); // 날짜 수집배열에서 중복 제거한 날짜 배열
+	dedupli = [...dateSet]; // 날짜 수집배열에서 중복 제거한 날짜 배열
+	
+	//trace(dedupli[0]);
+	
+	for (var i = 0; i < dedupli.length; i++) { 
+		//var dateCount = this.ds_bankList.getCaseCount("date == '"+ dedupli[0][i] +"'");
+		dedupliArr.push([dedupli[i]]);
+	}
+	
+	//trace(Array.isArray(dedupli));
+	
+	for (var i = 0; i < dedupli.length; i++) { 
+			var dateCount = this.ds_bankList.getCaseCount("date == '20230923'");
+			dedupliArr[i].push(dateCount);
+			trace(dedupliArr[i]);
+	}
+	 
+	
+	// 업권코드와 업권명칭을 배열에 담는다
+// 	for (var i = 0; i < this.ds_g1.rowcount; i++) { 
+//         var cdValId = this.ds_g1.getColumn(i, 0); // 업권코드
+// 		   var cdValNm = this.ds_g1.getColumn(i, 1); // 업권명칭
+//         arrG1Cd.push(cdValId);
+// 		arrG1Nm.push(cdValNm);
+//     }
+	
+	// Columns의 Column 갯수
+
+		//trace(this.ds_bankList.colcount, dedupli.length, this.ds_bankList.colcount * dedupli.length)
+		for (var j = 0; j < (this.ds_bankList.colcount * dedupli.length); j++) { 
+			cols += '<Column size="120"/>';
+		}
+
+	
+	// headBand 첫번째 cell 갯수
+	//for(var i=0; i<v_headRow; i++){
+		for (var j = 0; j < (this.ds_bankList.colcount * dedupli.length); j++) { 
+			headBandCell1 += '<Cell col="' + headBand1Count + '" row="0" text="타이틀1 ' + headBand1Count + '" />';
+			headBand1Count++;
+		}
+	//}
+	
+	// headBand 두번째 cell 갯수
+	for(var i=0; i<dedupli.length; i++){
+		for (var j = 0; j < (this.ds_bankList.colcount); j++) { 
+			var title = this.ds_bankList.getColID(j);
+			//trace(title)
+			/*headBandCell2 += '<Cell col="' + headBand2Count + '" row="1" text="타이틀2 ' + headBand2Count + '" />';*/
+			headBandCell2 += '<Cell col="' + headBand2Count + '" row="1" text="' + title + '" />';
+			headBand2Count++;
+		}
+	}
+	
+	// bodyBand 두번째 cell 갯수
+	for (var j = 0; j < this.ds_g2.rowcount; j++) { 
+		bodydBand1Count = 0;
+		for(var i=0; i<dedupli.length; i++){
+
+			
+			for (var k = 0; k < (this.ds_bankList.colcount); k++) { 
+				var title = this.ds_bankList.getColID(k);
+				var value = this.ds_bankList.getColumn(j, k);
+				//trace('bodydBand1Count', bodydBand1Count)
+				/*headBandCell2 += '<Cell col="' + headBand2Count + '" row="1" text="타이틀2 ' + headBand2Count + '" />';*/
+				bodyBandCell += '<Cell col="' + bodydBand1Count + '" row="' + j + '"  text="bind:' + title + '" />';
+				bodydBand1Count++;
+			}
+		}
+	}
+	
+	format +='<Formats>';
+	format +='<Format id="default">';
+	format +='<Columns>';
+	format += cols;
+// 	format +='<Column size="120"/>';
+// 	format +='<Column size="120"/>';
+	format +='</Columns>';
+	format +='<Rows>';
+	format +='<Row size="24" band="head"/>';
+	format +='<Row size="24" band="head"/>';
+	format +='<Row size="24"/>';
+	format +='</Rows>';
+	format +='<Band id="head">';
+	format += headBandCell1;
+	format += headBandCell2;
+// 	format +='<Cell/>';
+// 	format +='<Cell col="1"/>';
+// 	format +='<Cell row="1"/>';
+// 	format +='<Cell row="1" col="1"/>';
+	format +='</Band>';
+	
+	format +='<Band id="body">';
+	
+	format += bodyBandCell;
+	
+// 	format += '<Cell row="0" text="20230923"/>';
+// 	format += '<Cell col="1" row="0" text="저축은행"/>';
+// 	format += '<Cell col="2" row="0" text="A저축은행"/>';
+// 	format += '<Cell col="3" row="0" text="4440000"/>';
+// 	format += '<Cell col="4" row="0" text="7990000"/>';
+// 	format += '<Cell col="5" row="0" text="2340000"/>';
+// 	format += '<Cell col="6" row="0" text="780000"/>';
+// 	format += '<Cell col="7" row="0" text="20230923"/>';
+// 	format += '<Cell col="8" row="0" text="저축은행"/>';
+// 	format += '<Cell col="9" row="0" text="A저축은행"/>';
+// 	format += '<Cell col="10" row="0" text="4440000"/>';
+// 	format += '<Cell col="11" row="0" text="7990000"/>';
+// 	format += '<Cell col="12" row="0" text="2340000"/>';
+// 	format += '<Cell col="13" row="0" text="780000"/>';
+// 	
+// 	format += '<Cell row="1" text="20230923"/>';
+// 	format += '<Cell col="1" row="1" text="저축은행"/>';
+// 	format += '<Cell col="2" row="1" text="A저축은행"/>';
+// 	format += '<Cell col="3" row="1" text="4440000"/>';
+// 	format += '<Cell col="4" row="1" text="7990000"/>';
+// 	format += '<Cell col="5" row="1" text="2340000"/>';
+// 	format += '<Cell col="6" row="1" text="780000"/>';
+// 	format += '<Cell col="7" row="1" text="20230923"/>';
+// 	format += '<Cell col="8" row="1" text="저축은행"/>';
+// 	format += '<Cell col="9" row="1" text="A저축은행"/>';
+// 	format += '<Cell col="10" row="1" text="4440000"/>';
+// 	format += '<Cell col="11" row="1" text="7990000"/>';
+// 	format += '<Cell col="12" row="1" text="2340000"/>';
+// 	format += '<Cell col="13" row="1" text="780000"/>';
+	
+	format +='</Band>';
+	format +='</Format>';
+	format +='</Formats>';
+	
+	objGrid.set_formats(format);
+	
+	//trace('--->',dedupli, createCol, this.ds_bankList.colcount, format);
+	//trace('--->', objGrid.getCurFormatString());
+};
