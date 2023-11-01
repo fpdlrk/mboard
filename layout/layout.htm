@@ -14,12 +14,143 @@
 
     
     <div class="wrap">
+        <div class="header_area">
+            <!--S: 프로젝트 경로  -->
+                <div class="location_area">
+                    <div class="location_wrap">
+                        <div class="comname">
+                            <div class="logo"><img src="../assets/img/logo-gnb.svg" /></div>
+                        </div>
+                        <div class="lnb_btm">
+                            <div class="afa_area">
+                                <div class="label_item">
+                                    <span class="FirstName_label comm_label"></span><span class="labelFirstName">Summer Lee<em class="s_info">Admin</em></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="util_items">
+                            <div class="item">
+                                <div class="members_wrap">
+                                    <div class="afa_area">
+                                        <div class="label_item">
+                                            <span class="FirstName_label comm_label">L</span>
+                                            <span class="labelFirstName">주현우</span>
+                                        </div>
+                                    </div>
+                                    <div class="afa_area">
+                                        <div class="label_item">
+                                            <span class="FirstName_label comm_label">L</span>
+                                            <span class="labelFirstName">홍차장</span>
+                                        </div>
+                                    </div>
+                                    <div class="afa_area">
+                                        <div class="label_item">
+                                            <span class="FirstName_label comm_label">L</span>
+                                            <span class="labelFirstName">민귀홍</span>
+                                        </div>
+                                    </div>
+                                    <div class="more_member">+3</div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="share_wrap">
+                                    <button type="button" class="btn btn_red btn_mini" data-id="btnShare">
+                                    <i class="ico _share_icon _w _ic_small"></i>
+                                        Share
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="meatball_wrap">
+                                    <button type="button" class="btn_meatball">
+                                        <i class="ico _more_horizontal_icon _ic_small"></i>
+                                    </button>
+                                    <div class="meatball_body">
+                                        <div class="item">메뉴예정</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                    </div>
+
+                    <div class="util_items">
+                        <div class="filter_wrap">
+                            <button type="button" class="btn btn_small btn_filter btn_trans f_bold">
+                                <i class="ico _options_regular _ic_mini"></i>
+                                <span>워크스페이스 생성</span>
+                            </button>
+                        </div>
+                        <div class="filter_wrap">
+                            <button type="button" class="btn btn_small btn_filter btn_trans f_bold">
+                                <i class="ico _options_regular _ic_mini"></i>
+                                <span>초대하기</span>
+                            </button>
+                        </div>
+                        <div class="filter_wrap">
+                            <button type="button" class="btn btn_small btn_filter btn_trans f_bold _ico_ly">
+                                <i class="ico _options_regular _ic_mini"></i>
+                                <span class="txt">setting</span>
+                            </button>
+                        </div>
+                        
+                    </div>
+                </div>
+            <!--E: 프로젝트 경로  -->
+
+            <!--S: 페이지 상단 타이틀  -->
+            <div class="pg_title_wrap">
+                <div class="util _left">
+                    <div class="workspace_wrap">
+                        <button type="button" class="btn btn_small btn_filter f_bold flex_jl wide">
+                            <i class="ico _options_regular _ic_mini"></i>
+                            LS
+                        </button>
+                    </div>
+                    <div class="sort_wrap">
+                        <button type="button" class="btn btn_small btn_sort btn_red f_bold">
+                            <i class="ico _arrow_sort_down _ic_mini"></i>
+                            초대하기
+                        </button>
+                    </div>
+
+                </div>
+                <div class="util">
+                    <div class="filter_wrap">
+                        <button type="button" class="btn btn_small btn_blue_t01 btn_filter f_bold">
+                            <i class="ico _options_regular _ic_mini _w"></i>
+                            Filter
+                        </button>
+                    </div>
+                    <div class="sort_wrap">
+                        <button type="button" class="btn btn_small btn_blue_t01 btn_sort f_bold">
+                            <i class="ico _arrow_sort_down _ic_mini"></i>
+                            Sort
+                        </button>
+                    </div>
+                    <div class="search_wrap">
+                        <div class="form_group">
+                            <div class="form_item search_item">
+                                <div class="flex_box">
+                                    <input type="text" class="comm_input tp_small" placeholder="Search Word">
+                                    <button type="button" class="btn_search" id="">
+                                        <i class="ico _search_icon _ic_middle"></i>
+                                        Search
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--E: 페이지 상단 타이틀  -->
+        </div>
         <div class="wrap_container full_container">
             <!--S: 메뉴가 있는 layout -->
             <div class="menu_area">
-                <div class="comname">
-                    <div class="logo">MINDBOARD</div>
-                </div>
+                
 
                 
                 
@@ -29,76 +160,78 @@
                             <div class="afa_area">
                                 <div class="label_item">
                                     <span class="FirstName_label comm_label"></span><span class="labelFirstName">LS</span>
+                                    <button type="button" class="toggle">toggle</button>
                                 </div>
                             </div>
                             <ul class="dep_ul">
-                                <li class="selected"><a href="#" class="menu selected"><i class="ico _cube_regular _ic_small"></i>Projects</a>
+                                <li class="selected"><a href="#" class="menu selected"><i class="ico _cube_regular _ic_middle"></i>Projects</a>
                                     <ul class="dep_ul">
                                         <li>
                                             <a href="#" class="menu">
-                                                <i class="ico _document_edit_regular _ic_small"></i>
+                                                <i class="ico _document_edit_regular _ic_middle"></i>
                                                 IPMS 
                                                 <div class="labelText _template _tmpS">S</div>
                                             </a>
                                         </li>
                                         <li>
                                             <a href="#" class="menu">
-                                                <i class="ico _document_edit_regular _ic_small"></i>
+                                                <i class="ico _document_edit_regular _ic_middle"></i>
                                                 DOSIRAK 
                                                 <div class="labelText _template _tmpG">G</div>
                                             </a>
                                         </li>
                                         <li>
                                             <a href="#" class="menu">
-                                                <i class="ico _document_edit_regular _ic_small"></i>
+                                                <i class="ico _document_edit_regular _ic_middle"></i>
                                                 MELON 
                                                 <div class="labelText _template _tmpK">K</div>
                                             </a>
                                         </li>
                                     </ul>
                                 </li>
-                                <li><a href="#" class="menu"><i class="ico _people_regular _ic_small"></i>Members</a></li>
-                                <li><a href="#" class="menu"><i class="ico _settings_regular _ic_small"></i>Settings</a></li>
+                                <li><a href="#" class="menu"><i class="ico _people_regular _ic_middle"></i>Members</a></li>
+                                <li><a href="#" class="menu"><i class="ico _settings_regular _ic_middle"></i>Settings</a></li>
                             </ul>
-                            <button type="button" class="toggle">toggle</button>
+                            
                         </div>
 
                         <div class="item">
                             <div class="afa_area">
                                 <div class="label_item">
                                     <span class="FirstName_label comm_label"></span><span class="labelFirstName">Genie</span>
+                                    <button type="button" class="toggle">toggle</button>
                                 </div>
                             </div>
                             <ul class="dep_ul">
-                                <li class="selected"><a href="#" class="menu selected"><i class="ico _cube_regular _ic_small"></i>Projects</a>
+                                <li class="selected"><a href="#" class="menu selected"><i class="ico _cube_regular _ic_middle"></i>Projects</a>
                                     <ul class="dep_ul">
                                         <li>
                                             <a href="#" class="menu">
-                                                <i class="ico _document_edit_regular _ic_small"></i>
+                                                <i class="ico _document_edit_regular _ic_middle"></i>
                                                 IPMS 
                                                 <div class="labelText _template _tmpS">S</div>
                                             </a>
                                         </li>
                                         <li>
                                             <a href="#" class="menu">
-                                                <i class="ico _document_edit_regular _ic_small"></i>
+                                                <i class="ico _document_edit_regular _ic_middle"></i>
                                                 DOSIRAK 
                                                 <div class="labelText _template _tmpG">G</div>
                                             </a>
                                         </li>
                                         <li>
                                             <a href="#" class="menu">
-                                                <i class="ico _document_edit_regular _ic_small"></i>
+                                                <i class="ico _document_edit_regular _ic_middle"></i>
                                                 MELON 
                                                 <div class="labelText _template _tmpK">K</div>
                                             </a>
                                         </li>
                                     </ul>
                                 </li>
-                                <li><a href="#" class="menu"><i class="ico _people_regular _ic_small"></i>Members</a></li>
-                                <li><a href="#" class="menu"><i class="ico _settings_regular _ic_small"></i>Settings</a></li>
+                                <li><a href="#" class="menu"><i class="ico _people_regular _ic_middle"></i>Members</a></li>
+                                <li><a href="#" class="menu"><i class="ico _settings_regular _ic_middle"></i>Settings</a></li>
                             </ul>
-                            <button type="button" class="toggle">toggle</button>
+                            
                         </div>
                     </div>
                 </div>
@@ -110,106 +243,12 @@
                     </button>
                 </div>
 
-                <div class="lnb_btm">
-                    <div class="afa_area">
-                        <div class="label_item">
-                            <span class="FirstName_label comm_label"></span><span class="labelFirstName">Summer Lee<em class="s_info">Admin</em></span>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
             <!--E: 메뉴가 있는 layout -->
             <div class="screen_area">
 
-                <div class="header_area">
-                    <!--S: 프로젝트 경로  -->
-                        <div class="location_area">
-                            <div class="location_wrap">
-                                <ul class="location_items">
-                                    <li><a href="#">LS</a></li>
-                                    <li><a href="#">GQMS</a></li>
-                                </ul>
-                            </div>
-
-                            <div class="util_items">
-                                <div class="item">
-                                    <div class="members_wrap">
-                                        <div class="afa_area">
-                                            <div class="label_item">
-                                                <span class="FirstName_label comm_label">L</span>
-                                                <span class="labelFirstName">주현우</span>
-                                            </div>
-                                        </div>
-                                        <div class="afa_area">
-                                            <div class="label_item">
-                                                <span class="FirstName_label comm_label">L</span>
-                                                <span class="labelFirstName">홍차장</span>
-                                            </div>
-                                        </div>
-                                        <div class="afa_area">
-                                            <div class="label_item">
-                                                <span class="FirstName_label comm_label">L</span>
-                                                <span class="labelFirstName">민귀홍</span>
-                                            </div>
-                                        </div>
-                                        <div class="more_member">+3</div>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="share_wrap">
-                                        <button type="button" class="btn btn_red btn_mini" data-id="btnShare">
-                                        <i class="ico _share_icon _w _ic_small"></i>
-                                            Share
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="meatball_wrap">
-                                        <button type="button" class="btn_meatball">
-                                            <i class="ico _more_horizontal_icon _ic_small"></i>
-                                        </button>
-                                        <div class="meatball_body">
-                                            <div class="item">메뉴예정</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    <!--E: 프로젝트 경로  -->
-
-                    <!--S: 페이지 상단 타이틀  -->
-                    <div class="pg_title_wrap">
-                        <h2 class="tit">GQMS</h2>
-                        <div class="util">
-                            <div class="filter_wrap">
-                                <button type="button" class="btn btn_small btn_filter f_bold">
-                                    <i class="ico _options_regular _ic_mini"></i>
-                                    Filter
-                                </button>
-                            </div>
-                            <div class="sort_wrap">
-                                <button type="button" class="btn btn_small btn_sort f_bold">
-                                    <i class="ico _arrow_sort_down _ic_mini"></i>
-                                    Sort
-                                </button>
-                            </div>
-                            <div class="search_wrap">
-                                <div class="form_group">
-                                    <div class="form_item search_item">
-                                        <div class="flex_box">
-                                            <input type="text" class="comm_input tp_small" placeholder="Search Word">
-                                            <button type="button" class="btn_search" id="">
-                                                <i class="ico _search_icon _ic_middle"></i>
-                                                Search
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--E: 페이지 상단 타이틀  -->
-                </div>
+                
 
 
             </div>
