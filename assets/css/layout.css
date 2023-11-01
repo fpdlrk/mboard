@@ -58,7 +58,7 @@
 .header_area .gnb ul {display: flex;}
 .header_area .gnb ul li {}
 .header_area .gnb ul li > a {padding:15px 0;margin:0 15px; display: block;position: relative; line-height: 2;}
-.header_area .gnb ul li > a.selected {color: var(--main);font-weight: 700;}
+.header_area .gnb ul li > a.selected {color: var(--main);font-weight: 500;}
 .header_area .gnb ul li > a.selected:after {
   width:100%;
   height:2px;
@@ -84,7 +84,7 @@
 .lnb > .item ul li a {padding: 3px 0;display: flex;align-items: center;position: relative;}
 .lnb > .item ul li a .ico {margin-right: 5px;}
 .lnb > .item ul li a .labelText {padding: 5px 7px;/* position: relative; */right: 0;/* left: 0; */border-radius: 50%;}
-.lnb > .item ul li a.selected {font-weight: 700;text-decoration: underline;color:var(--main)}
+.lnb > .item ul li a.selected {font-weight: 500;text-decoration: underline;color:var(--main)}
 .lnb > .item ul li a.selected .ico {}
 .lnb > .item ul li a:hover {text-decoration: underline;}
 .lnb > .item ul li ul {padding: 5px 0 5px 6px;line-height: 1.8;}
@@ -108,13 +108,13 @@
   display: inline-block;
   padding:0 10px;
 }
-.location_wrap .location_items > li:last-child {font-weight: 700;}
+.location_wrap .location_items > li:last-child {font-weight: 500;}
 
 .members_wrap {display: flex;align-items: center;}
 .members_wrap .afa_area {margin: 0 0 0 -5px;background: none;}
 .members_wrap .afa_area .comm_label {width: 28px;height: 28px;padding: 0;margin:0 0 0 0;border-radius: 50%;font-size: 11px;line-height: 2;border: 2px solid #fff;}
 .members_wrap .afa_area .labelFirstName {font-size:0;}
-.members_wrap .more_member {padding:0 0 0 5px;font-weight: 700;}
+.members_wrap .more_member {padding:0 0 0 5px;font-weight: 500;}
 
 .pg_title_wrap {padding: 10px;display: flex;justify-content: space-between;align-items: center;border-bottom: 1px solid #ddd;}
 .pg_title_wrap .tit {font-size: 16px;}
@@ -180,7 +180,7 @@ select.templ_select + p.desc {padding: 15px;border: 1px solid #e6e6e6;border-top
 .comm_card .comm_card_header .btn_mdf {position: absolute;top: 50%;right:15px;transform: translateY(-50%);}
 .comm_card .comm_card_body {padding: 20px;padding-top: 0;position: relative;}
 .comm_card .comm_card_body > .form_group {padding:20px 0 0 0;}
-.comm_card .comm_card_body .inf_area span {font-weight: 700;}
+.comm_card .comm_card_body .inf_area span {font-weight: 500;}
 .comm_card .comm_card_footer {display: flex;justify-content: space-between;padding: 15px;border-radius:0 0 6px 6px;}
 .comm_card .comm_card_footer .col_L {}
 .comm_card .comm_card_footer .col_R {}
@@ -222,7 +222,7 @@ select.templ_select + p.desc {padding: 15px;border: 1px solid #e6e6e6;border-top
 
 .member_wrap .member_body._member_out {width: 900px;}
 .member_wrap .member_body._member_out .btn {margin:10px 0 0 0;}
-.member_wrap .member_body._member_out > h2 {padding: 0;font-size: 32px;font-weight: 700;}
+.member_wrap .member_body._member_out > h2 {padding: 0;font-size: 32px;font-weight: 500;}
 .member_wrap .member_body._member_out ._in_txt {padding: 20px 0px;text-align: center;line-height: 1.8;}
 
 .login_btm {padding: 10px 0 0 0;}
@@ -238,11 +238,11 @@ select.templ_select + p.desc {padding: 15px;border: 1px solid #e6e6e6;border-top
 /*///// 초대관련 BOX /////*/
 .invitation {}
 .invitation .invi_inner {}
-.invitation .invi_inner .invi_header {font-size: 20px;word-break: keep-all;font-weight: 700;}
+.invitation .invi_inner .invi_header {font-size: 20px;word-break: keep-all;font-weight: 500;}
 .invitation .invi_inner .invi_header .com_name {color:var(--sub);}
 .invitation .invi_inner .user_area {padding: 15px;margin:20px 0;border: 1px solid #eee;border-radius: 6px;}
 .invitation .invi_inner .user_area .comm_user {display: flex;}
-.invitation .invi_inner .user_area .comm_user .user {font-weight: 700;}
+.invitation .invi_inner .user_area .comm_user .user {font-weight: 500;}
 .invitation .invi_inner .info_area {}
 .invitation .invi_inner .afa_area {padding: 15px;justify-content: center;margin:20px 0 0px 0;background: #f0f9ff;}
 .invitation .invi_inner .btm_area {}
@@ -250,7 +250,7 @@ select.templ_select + p.desc {padding: 15px;border: 1px solid #e6e6e6;border-top
 .invitation.compl .invi_inner .info_area {font-size: 16px;line-height: 1.8;}
 
 /*///// Workspace /////*/
-.workspace_create_body {width: 700px !important;}
+.workspace_create_body {width: 500px !important;}
 .workspace_create_body .flex_box {margin-top:10px;}
 .workspace_box {border: 1px solid #ddd;border-radius: 10px;}
 .workspace_box + .workspace_box {margin:30px 0 0 0;}
@@ -301,7 +301,7 @@ select.templ_select + p.desc {padding: 15px;border: 1px solid #e6e6e6;border-top
 .toggle_wrap input[type="checkbox"]:checked + label {background: #a7c4ed;border:1px solid #a7c4ed;}
 .toggle_wrap input[type="checkbox"]:checked + label:before {background: #006bff;transform:translateX(200%);}
 .labelText {padding:10px 15px;border:1px solid #eee;background: #f0fff0;border-radius: 6px;color:#4AA76C;}
-.labelText._template {padding: 5px 10px;position: absolute;top: 50%;right:15px;transform: translateY(-50%);font-size: 10px;font-weight: 700;color:#fff;border:none;line-height: 1;}
+.labelText._template {padding: 5px 10px;position: absolute;top: 50%;right:15px;transform: translateY(-50%);font-size: 10px;font-weight: 500;color:#fff;border:none;line-height: 1;}
 .labelText._tmpS {background:var(--tmpS);}
 .labelText._tmpG {background:var(--tmpG);}
 .labelText._tmpK {background:var(--tmpK);}
@@ -346,7 +346,7 @@ select.templ_select + p.desc {padding: 15px;border: 1px solid #e6e6e6;border-top
 
 /*///// 리스트 테이블 /////*/
 .tbl_list {width:100%;table-layout: fixed;border-collapse : collapse;border-top:2px solid #333;}
-.tbl_list thead tr th {height:42px;padding:2px 0 2px 0;background:#f5f5f5;border-left:1px solid #EBEFF2;border-bottom:1px solid #EBEFF2;font-weight:700;letter-spacing: -1px;}
+.tbl_list thead tr th {height:42px;padding:2px 0 2px 0;background:#f5f5f5;border-left:1px solid #EBEFF2;border-bottom:1px solid #EBEFF2;font-weight:500;letter-spacing: -1px;}
 .tbl_list tbody tr td {height:42px;padding:5px 5px 5px 5px;border-left:1px solid #EBEFF2;border-right:1px solid #EBEFF2;border-bottom:1px solid #EBEFF2;color:#212529;text-align:center;word-break: break-all;font-size:12px;}
 .tbl_list tbody tr td a {color:#1A75FF;}
 .tbl_list tbody tr td a:hover {text-decoration:underline;}
@@ -374,7 +374,7 @@ select.templ_select + p.desc {padding: 15px;border: 1px solid #e6e6e6;border-top
 
 /*///// 테이블 읽기/쓰기 /////*/
 .tbl_view {width: 100%;table-layout: fixed;border-collapse : collapse;background:#fff; border: 1px solid #DBDBDB;border-width:1px 0 1px 1px;}
-.tbl_view th {padding:5px 0 5px 0;background: #EDEDED;border-bottom:1px solid #DBDBDB;border-right:1px solid #DBDBDB; color: #202223;font-weight:700;}
+.tbl_view th {padding:5px 0 5px 0;background: #EDEDED;border-bottom:1px solid #DBDBDB;border-right:1px solid #DBDBDB; color: #202223;font-weight:500;}
 .tbl_view td {height:45px;padding:7px;border-top: 1px solid #DBDBDB;border-bottom: 1px solid #DBDBDB;border-right:1px solid #DBDBDB;font-size:12px;}
 .tbl_view td.tit {background:#F8F8F8;font-weight:500;text-align:center;}
 .product_date {padding:0 0 5px 0;color:#FF7070}
@@ -386,7 +386,7 @@ select.templ_select + p.desc {padding: 15px;border: 1px solid #e6e6e6;border-top
 .form_group_block._3x .form_group {width:32%;}
 .form_group_block + .form_group {margin-top:10px;}
 .form_group + .form_group {margin-top:10px;}
-.form_group .tit {padding:6px 0;display: block;font-size:12px;font-weight:700;position: relative;}
+.form_group .tit {padding:6px 0;display: block;font-size:12px;font-weight:500;position: relative;}
 .form_group .comm_input {width:100%;}
 .form_group .form_item {position: relative;}
 .form_group .form_item.tp_clear .btn_clear {width: 35px;height: 35px;background: url('../../assets/img/ico_clear.png') no-repeat 50% 50%;background-size: 60%;font-size:0px;position: absolute;right: 10px;top: 6px;}
@@ -428,9 +428,9 @@ select.templ_select + p.desc {padding: 15px;border: 1px solid #e6e6e6;border-top
 .commPopup {width:500px;position:absolute;left:50%;top:50%;border:0px solid #b1b1b1;background:#fff;z-index:1000;border-radius:4px;box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);overflow:hidden;transform: translate(-50%, -50%);}
 .commPopup .pop_header {padding:15px 20px;border-bottom:1px solid #EDEDED;}
 .commPopup .pop_header:after {content:""; display:block; clear:both;}
-.commPopup .pop_header h2 {float:left;font-size: 18px;font-weight: 700;color: #333;}
+.commPopup .pop_header h2 {float:left;font-size: 18px;font-weight: 500;color: #333;}
 .commPopup .pop_body {padding:20px;background:#fff;}
-.commPopup .pop_body .sub_body_tit {padding:10px 0 10px 0;font-size: 16px;font-weight:700;text-align: center;}
+.commPopup .pop_body .sub_body_tit {padding:10px 0 10px 0;font-size: 16px;font-weight:500;text-align: center;}
 .commPopup .popup_footer {padding: 15px;text-align: center;background: #f5f5f5;}
 .commPopup .popup_footer .btn_g {display:flex;justify-content: flex-end;}
 .commPopup .popup_footer .btn_g button {min-width: 60px;}
@@ -572,7 +572,7 @@ label.btn {line-height: 3;}
 	font-size: 12px;
 	line-height: 2.5;
 	color:#333;
-	font-weight:500;
+	font-weight:400;
 }
 .btn:disabled {background: #DBDBDB;color:#fff !important;border:none !important;cursor:default;}
 .btn_mini {padding:0 10px;height:24px;font-size:12px;line-height: 1.2;}
@@ -1121,5 +1121,5 @@ svg {
 .access_wrap {width:600px;height:600px;margin:0 auto;text-align: center;}
 .access_wrap:before {width:300px;height:300px;margin: 50px auto 0 auto;content:"";display: block;clear:both;background: url(../img/access_denied.png) no-repeat 50% 50%;}
 .access_wrap .txt {padding: 0 0 40px 0;font-size: 16px;}
-.access_wrap .txt .tit {font-size: 40px;font-weight: 700;}
-.button_back {width: 180px;background: #fa0050;display:inline-block;font-size: 20px;line-height: 3;text-align: center;border-radius: 30px;font-weight: 700;letter-spacing: -1px;color: #fff !important;}
+.access_wrap .txt .tit {font-size: 40px;font-weight: 500;}
+.button_back {width: 180px;background: #fa0050;display:inline-block;font-size: 20px;line-height: 3;text-align: center;border-radius: 30px;font-weight: 500;letter-spacing: -1px;color: #fff !important;}
